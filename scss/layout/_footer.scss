@@ -1,0 +1,87 @@
+footer {
+
+    margin-top: 5rem;
+    padding-top: 3rem;
+    height: 60vh;
+
+    background-color: $principal-color;
+
+    p.subtitle {
+        color: #ffff;
+    }
+}
+
+#form {
+    
+    @media screen and (max-width: $mobile-generic) {
+
+      padding: 5%;
+      padding-bottom: 0px;
+    }
+
+    @media screen and (min-width: $desktop-small) {
+        @include padding-div(25%);
+        margin-top: 3rem;
+    }
+}
+
+
+.field label {
+    display: block;
+    font-size: 12px;
+    color: #777;
+}
+
+.field {
+    label{
+        color: #ffff;
+    }
+    input {
+        display: block;
+        min-width: 250px;
+        line-height: 1.5;
+        font-size: 14px;
+
+        margin-bottom: 2rem;
+        width: 100%;
+        /* Full width */
+        padding: 12px;
+        /* Some padding */
+        border: 1px solid #ccc;
+        /* Gray border */
+        border-radius: 4px;
+        /* Rounded borders */
+        box-sizing: border-box;
+        /* Make sure that padding and width stays in place */
+
+        resize: vertical;
+            /* Allow the user to vertically resize the textarea (not horizontally) */
+
+        background-color: #F6F9FF;
+
+    }
+}
+
+
+input[type="submit"] {
+    background-color: $secondary-color;
+    color:  $principal-color;
+    font-weight: 200;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#form_input_name {
+   display: grid;
+   grid-template-columns: 2fr 1fr;
+   column-gap: 1rem;
+   @media screen and (max-width: $mobile-generic) {
+    grid-template-columns: 1fr;
+}
+}
+
+#message{
+    height: 5rem;
+}

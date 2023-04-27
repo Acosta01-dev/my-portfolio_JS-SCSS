@@ -1,0 +1,118 @@
+header {
+    height: 3rem;
+    width: 100%;
+    background-color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px;
+
+    position: fixed;
+    z-index: 1111;
+    top: 0;
+    left: 0;
+
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+
+    @media screen and (min-width: $desktop-large) {
+        @include padding-div(20%);
+
+    }
+    @media screen and (min-width: $desktop-small) and (max-width: $desktop-large){
+        
+        @include padding-div(25%);
+    }
+
+
+    .header_logo {
+        a{
+            font-size: 2rem;
+        }
+        cursor: pointer;
+        @media screen and (max-width: $mobile-generic) {
+            padding-left: 10px;
+            padding-right: 10px;
+
+        }
+
+        @media screen and (min-width: $desktop-large) {
+           img{
+            height: 2rem;
+            margin-top: 5px;
+           }
+    
+        }
+        @media screen and (min-width: $desktop-small) and (max-width: $desktop-large){
+          
+        }
+
+    }
+    @media screen and (max-width: $mobile-generic) {
+        flex-direction: column;
+        justify-content: left;
+        align-items:baseline;
+        padding: 0px;
+
+    }
+    nav {
+        ul {               
+            display: flex;
+           background-color: blue;
+            @media screen and (max-width: $mobile-generic) {
+                align-items: center;
+                flex-direction: column;
+                background-color: red;
+                position: absolute;
+                overflow: hidden;
+                top: 3rem;
+                width: 100%;
+            }
+                
+                li{
+                    margin-left: 15px;
+                    @media screen and (max-width: $mobile-generic) {
+                        margin: 1.1rem;
+                    }
+                    a{
+                        font-weight: 500;
+                        color: #0A1029;
+                        text-decoration: none;
+
+                    }
+                    
+                }
+           
+          
+        }
+    }
+
+}
+#mobile-nav{
+    max-height: 0;
+    transition: all .5s;
+
+    align-items: center;
+}
+.burguer_menu{
+    position: fixed;
+    right: 1rem;
+    top:0;
+
+    transition: all .5s;
+
+    display: none;
+    @media screen and (max-width: $mobile-generic) {
+        display: block;
+    }
+}
+#burguer_menu-icon {
+    cursor: pointer;
+    font-size: 2rem;
+
+
+}
+
+

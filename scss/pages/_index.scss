@@ -1,0 +1,520 @@
+#presentation {
+    padding: 5.5rem 5% 4rem 5%;
+    //margin-top: 3rem;
+    background-color: white;
+
+    @media screen and (min-width: $desktop-large) {
+        @include padding-div(25%);
+
+        padding-top: 9%;
+        padding-bottom: 12%;
+
+    }
+
+    @media screen and (min-width: $desktop-small) {
+        @include padding-div(18%);
+
+        padding-top: 13%;
+        padding-bottom: 13%;
+
+
+    }
+
+    .presentation_intro-text {
+        display: grid;
+        grid-template-columns: 0.1fr 1fr;
+
+
+        @media screen and (max-width: $mobile-generic) {
+            grid-template-columns: 1fr;
+
+        }
+
+        .presentation_intro-text_social {
+            display: flex;
+            flex-direction: column;
+
+            @media screen and (max-width: $mobile-generic) {
+                flex-direction: row;
+
+
+            }
+
+
+            i {
+                cursor: pointer;
+                
+                color: $principal-color;
+                font-size: 2rem;
+
+
+                @media screen and (max-width: $mobile-generic) {
+                    margin: 0;
+                    font-size: 3rem;
+
+                    &:last-of-type {
+                        margin-left: 1rem;
+                    }
+
+                }
+
+                @media screen and (min-width: $desktop-small) {
+                    font-size: 3rem;
+                }
+            }
+
+
+        }
+
+    }
+
+    h1 {
+        font-size: 2rem;
+        font-weight: 100;
+
+        @media screen and (max-width: $mobile-generic) {
+            font-size: 3rem;
+        }
+
+
+        @media screen and (min-width: $desktop-small) {
+            font-size: 4rem;
+        }
+
+
+
+        span {
+            font-weight: 800;
+        }
+
+        span.typed-text {
+            font-weight: 100;
+        }
+    }
+
+    p {
+        color: $muted;
+
+        @media screen and (max-width: $mobile-generic) {
+            font-size: 1.15rem;
+        }
+
+        @media screen and (min-width: $desktop-small) {
+            font-size: 1.3rem;
+        }
+
+    }
+
+    button {
+
+
+        cursor: pointer;
+
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        padding: .7rem;
+        border-radius: 15px;
+        background-color: $principal-color;
+        margin-top: 2rem;
+        transition: all .5s ease;
+
+        @media screen and (max-width: $mobile-generic) {
+            padding: 1.2rem;
+        }
+
+        &:hover {
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
+            padding-left: .8rem;
+            padding-right: .8rem;
+
+            @media screen and (max-width: $mobile-generic) {
+                padding-left: 1.4rem;
+                padding-right: 1.4rem;
+            }
+
+            p {
+                i {}
+            }
+
+        }
+
+
+        p {
+
+
+            font-weight: 600;
+            font-size: 18px;
+
+            position: relative;
+            bottom: 7px;
+            color: $secondary-color;
+
+
+            i {
+
+                font-size: 35px;
+                margin-left: 15px;
+
+                position: relative;
+                top: 7px;
+            }
+        }
+
+    }
+
+}
+
+#aboutme {
+    padding: 2rem 5% 4rem 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media screen and (min-width: $desktop-large) {
+        @include padding-div(25%);
+
+
+    }
+
+    @media screen and (min-width: $desktop-small) and (max-width: $desktop-large) {
+        @include padding-div(23%);
+
+    }
+
+    p {
+        text-align: center;
+    }
+
+    p.subtitle {
+        position: relative;
+        top: 2rem;
+    }
+
+    i {
+        display: block;
+        margin: 0 auto;
+        font-size: 7rem;
+
+        color: $principal-color;
+    }
+}
+
+
+
+#experience {
+    padding: 2rem 5% 4rem 5%;
+
+    @media screen and (min-width: $desktop-large) {
+        @include padding-div(25%);
+
+
+    }
+
+    @media screen and (min-width: $desktop-small) {
+        @include padding-div(25%);
+
+
+    }
+}
+
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    margin-bottom: 2rem;
+
+    @media screen and (min-width: $desktop-small) {
+        position: relative;
+        right: 1.2rem;
+
+        &:nth-child(2) {
+            position: relative;
+            right: 0rem;
+            justify-content: center;
+
+            .tabs_button {
+                margin-right: 1.5rem;
+            }
+        }
+    }
+
+
+
+    .tabs_button,
+    .tabz_button {
+       
+
+        transition: all .1s;
+        padding: 5px 15px 5px 15px;
+
+        border-radius: 25px;
+        background-color: rgb(238, 238, 238);
+        button{
+            cursor: pointer;
+        }
+    }
+
+    .tab-active {
+        background-color: $principal-color;
+        padding: 5px 15px 5px 15px;
+        border-radius: 25px;
+     
+        button{
+            color: white;
+        }
+    }
+}
+
+
+#myskills {
+    padding: 2rem 5% 4rem 5%;
+
+    @media screen and (min-width: $desktop-large) {
+        @include padding-div(25%);
+
+
+    }
+
+    @media screen and (min-width: $desktop-small) and (max-width: $desktop-large) {
+        @include padding-div(25%);
+
+
+    }
+}
+
+.tabs-content {
+    background-color: rgb(242,242,242);
+
+    height: 100%;
+    padding: 1rem;
+    border-radius: 25px;
+
+    i.fa-database,
+    i.fa-php{
+        background-color: #0A1029;
+        color: white;
+        border-radius: 5px;
+
+        padding: .2rem;
+
+        @media screen and (max-width: $mobile-generic) {
+            font-size: 2.9rem;
+            padding: .5rem;
+
+        }
+
+        @media screen and (min-width: $desktop-small) {
+            font-size: 3.5rem;
+            padding: .4rem;
+
+        }
+    }
+
+    i.fa-databas
+    {
+        @media screen and (max-width: $mobile-generic) {
+            padding: .5rem;
+            font-size: 2.5rem;
+        }
+
+        @media screen and (min-width: $desktop-small) {
+            padding: .5rem;
+            font-size: 3.5rem;
+
+        }
+    }
+}
+
+.tab-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+
+
+    p {
+        display: flex;
+        align-items: center;
+
+        font-weight: 700;
+        margin: 1rem;
+    }
+
+    i {
+        margin-right: 10px;
+        font-size: 2rem;
+
+
+        @media screen and (max-width: $mobile-generic) {
+            font-size: 4rem;
+        }
+
+        @media screen and (min-width: $desktop-small) {
+            font-size: 5rem;
+
+        }
+    }
+
+}
+
+
+
+.tab-content-active {
+    height: 100%;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+#projects {
+    padding: 2rem 5% 0 5%;
+
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $desktop-large) {
+
+        @include padding-div(21%);
+   
+    }
+
+    @media screen and (min-width: $desktop-small) and (max-width: $desktop-large) {
+        @include padding-div(20%);
+    }
+
+    .projects_divs {
+
+        display: flex;
+        flex: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        transform: translateX(2%);
+
+        @media screen and (min-width: $desktop-large) {
+
+           position: relative;
+           right: .5rem;
+       
+        }
+        @media screen and (min-width: $desktop-small) and (max-width: $desktop-large) {
+        }
+        div {
+
+
+            margin: 1rem;
+            cursor: pointer;
+            overflow: hidden;
+
+
+
+            width: 245px;
+            height: 150px;
+            border-radius: 25px;
+            margin-right: 2rem;
+
+            @media screen and (max-width: $mobile-generic) {
+          
+                width: calc(245px*1.5);
+                width: 90%;
+            }
+            @media screen and (min-width: $desktop-large) {
+                width: calc(245px*1.4);
+                background-color: red;
+            }
+
+            $i : 1;
+
+            &:nth-child(#{$i}) {
+
+
+                background-color: $principal-color;
+
+                //   background-image: linear-gradient(to right, #3a65ff, #2d6cff, #2073ff, #1179ff, #007fff);
+            }
+
+            $i : $i+1;
+
+            &:nth-child(#{$i}) {
+
+
+
+                background-color: $principal-color;
+
+                //background-image: linear-gradient(to right, #474555, #494a5c, #4b4f62, #4d5569, #4e5a6f);
+            }
+
+            $i : $i+1;
+
+            &:nth-child(#{$i}) {
+                background-color: $principal-color;
+
+                //background-image: linear-gradient(to right, #ee0038, #f00049, #f1005a, #f0006a, #ed007a);
+            }
+
+            $i : $i+1;
+
+            &:nth-child(#{$i}) {
+                background-color: rgb(223, 223, 223);
+
+                //background-image: linear-gradient(to right, #ee0038, #f00049, #f1005a, #f0006a, #ed007a);
+
+                i {
+                    float: none;
+                    position: relative;
+
+                    display: block;
+
+
+
+                    top: 2.6rem;
+                    text-align: center;
+                    color: rgb(144, 144, 144);
+                    @media screen and (min-width: $desktop-large) {
+                        top: 2.3rem;
+                    }
+                }
+            }
+
+
+
+            p {
+
+                font-size: 2.2rem;
+                font-weight: 800;
+                position: relative;
+                bottom: .6rem;
+                right: .2rem;
+
+                color: white;
+
+                text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+
+            }
+
+            i {
+                float: right;
+                font-size: 4rem;
+                color: white;
+                font-weight: 800;
+                position: relative;
+                bottom: 1.5rem;
+                left: 5px;
+
+                text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+                @media screen and (min-width: $desktop-large) {
+                    font-size: 5rem;
+                    bottom: 2.8rem;
+                }
+
+            }
+        }
+    }
+}

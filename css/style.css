@@ -1,0 +1,655 @@
+/*
+$fsize-mobile-h1:;
+$fsize-mobile-subtitle:;
+$fsize-mobile-text:;
+
+
+$fsize-desktop-h1:;
+$fsize-desktop-subtitle:;
+$fsize-desktop-text:;
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+ul,
+ol {
+  list-style: none; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+img,
+embed,
+object,
+video {
+  max-width: 100%; }
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  display: block;
+  margin: 0 auto;
+  background-color: #F6F9FF; }
+
+body, html {
+  overflow-x: hidden;
+  color: #0A1029; }
+
+@media screen and (max-width: 800px) {
+  .mobile {
+    display: block; } }
+
+a {
+  color: #3a65ff;
+  text-decoration: underline; }
+
+html {
+  scroll-behavior: smooth; }
+
+p.subtitle {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #0A1029; }
+
+header {
+  height: 3rem;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  z-index: 1111;
+  top: 0;
+  left: 0;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); }
+  @media screen and (min-width: 1400px) {
+    header {
+      padding-left: 20%;
+      padding-right: 20%; } }
+  @media screen and (min-width: 1200px) and (max-width: 1400px) {
+    header {
+      padding-left: 25%;
+      padding-right: 25%; } }
+  header .header_logo {
+    cursor: pointer; }
+    header .header_logo a {
+      font-size: 2rem; }
+    @media screen and (max-width: 800px) {
+      header .header_logo {
+        padding-left: 10px;
+        padding-right: 10px; } }
+    @media screen and (min-width: 1400px) {
+      header .header_logo img {
+        height: 2rem;
+        margin-top: 5px; } }
+  @media screen and (max-width: 800px) {
+    header {
+      flex-direction: column;
+      justify-content: left;
+      align-items: baseline;
+      padding: 0px; } }
+  header nav ul {
+    display: flex;
+    background-color: blue; }
+    @media screen and (max-width: 800px) {
+      header nav ul {
+        align-items: center;
+        flex-direction: column;
+        background-color: red;
+        position: absolute;
+        overflow: hidden;
+        top: 3rem;
+        width: 100%; } }
+    header nav ul li {
+      margin-left: 15px; }
+      @media screen and (max-width: 800px) {
+        header nav ul li {
+          margin: 1.1rem; } }
+      header nav ul li a {
+        font-weight: 500;
+        color: #0A1029;
+        text-decoration: none; }
+
+#mobile-nav {
+  max-height: 0;
+  transition: all .5s;
+  align-items: center; }
+
+.burguer_menu {
+  position: fixed;
+  right: 1rem;
+  top: 0;
+  transition: all .5s;
+  display: none; }
+  @media screen and (max-width: 800px) {
+    .burguer_menu {
+      display: block; } }
+
+#burguer_menu-icon {
+  cursor: pointer;
+  font-size: 2rem; }
+
+footer {
+  margin-top: 5rem;
+  padding-top: 3rem;
+  height: 60vh;
+  background-color: #3a65ff; }
+  footer p.subtitle {
+    color: #ffff; }
+
+@media screen and (max-width: 800px) {
+  #form {
+    padding: 5%;
+    padding-bottom: 0px; } }
+
+@media screen and (min-width: 1200px) {
+  #form {
+    padding-left: 25%;
+    padding-right: 25%;
+    margin-top: 3rem; } }
+
+.field label {
+  display: block;
+  font-size: 12px;
+  color: #777; }
+
+.field label {
+  color: #ffff; }
+
+.field input {
+  display: block;
+  min-width: 250px;
+  line-height: 1.5;
+  font-size: 14px;
+  margin-bottom: 2rem;
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  resize: vertical;
+  /* Allow the user to vertically resize the textarea (not horizontally) */
+  background-color: #F6F9FF; }
+
+input[type="submit"] {
+  background-color: #42fff4;
+  color: #3a65ff;
+  font-weight: 200;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; }
+
+#form_input_name {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 1rem; }
+  @media screen and (max-width: 800px) {
+    #form_input_name {
+      grid-template-columns: 1fr; } }
+
+#message {
+  height: 5rem; }
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  /* The actual timeline (the vertical ruler) */ }
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #3a65ff;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    border-radius: 5px; }
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  /* The circles on the timeline */ }
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -.75rem;
+    background-color: #42fff4;
+    border: 4px solid #3a65ff;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1; }
+
+/* Place the container to the left */
+.left {
+  left: 0;
+  /* Add arrows to the left container (pointing right) */ }
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid rgba(255, 255, 255, 0);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent rgba(255, 255, 255, 0); }
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+  /* Add arrows to the right container (pointing left) */
+  /* Fix the circle for containers on the right side */ }
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid rgba(0, 0, 0, 0);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgba(255, 255, 255, 0) transparent transparent; }
+  .right::after {
+    left: -.77rem; }
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }
+  .content i {
+    color: gray; }
+  .content p {
+    color: gray; }
+    .content p span {
+      color: black; }
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 800px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px; }
+  /* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    /* Make sure that all arrows are pointing leftwards */ }
+    .container::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent; }
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 18px; }
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%; } }
+
+.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite; }
+
+.cursor.typing {
+  animation: none; }
+
+@keyframes blink {
+  0% {
+    background-color: #ccc; }
+  49% {
+    background-color: #ccc; }
+  50% {
+    background-color: transparent; }
+  99% {
+    background-color: transparent; }
+  100% {
+    background-color: #ccc; } }
+
+#presentation {
+  padding: 5.5rem 5% 4rem 5%;
+  background-color: white; }
+  @media screen and (min-width: 1400px) {
+    #presentation {
+      padding-left: 25%;
+      padding-right: 25%;
+      padding-top: 9%;
+      padding-bottom: 12%; } }
+  @media screen and (min-width: 1200px) {
+    #presentation {
+      padding-left: 18%;
+      padding-right: 18%;
+      padding-top: 13%;
+      padding-bottom: 13%; } }
+  #presentation .presentation_intro-text {
+    display: grid;
+    grid-template-columns: 0.1fr 1fr; }
+    @media screen and (max-width: 800px) {
+      #presentation .presentation_intro-text {
+        grid-template-columns: 1fr; } }
+    #presentation .presentation_intro-text .presentation_intro-text_social {
+      display: flex;
+      flex-direction: column; }
+      @media screen and (max-width: 800px) {
+        #presentation .presentation_intro-text .presentation_intro-text_social {
+          flex-direction: row; } }
+      #presentation .presentation_intro-text .presentation_intro-text_social i {
+        cursor: pointer;
+        color: #3a65ff;
+        font-size: 2rem; }
+        @media screen and (max-width: 800px) {
+          #presentation .presentation_intro-text .presentation_intro-text_social i {
+            margin: 0;
+            font-size: 3rem; }
+            #presentation .presentation_intro-text .presentation_intro-text_social i:last-of-type {
+              margin-left: 1rem; } }
+        @media screen and (min-width: 1200px) {
+          #presentation .presentation_intro-text .presentation_intro-text_social i {
+            font-size: 3rem; } }
+  #presentation h1 {
+    font-size: 2rem;
+    font-weight: 100; }
+    @media screen and (max-width: 800px) {
+      #presentation h1 {
+        font-size: 3rem; } }
+    @media screen and (min-width: 1200px) {
+      #presentation h1 {
+        font-size: 4rem; } }
+    #presentation h1 span {
+      font-weight: 800; }
+    #presentation h1 span.typed-text {
+      font-weight: 100; }
+  #presentation p {
+    color: #999; }
+    @media screen and (max-width: 800px) {
+      #presentation p {
+        font-size: 1.15rem; } }
+    @media screen and (min-width: 1200px) {
+      #presentation p {
+        font-size: 1.3rem; } }
+  #presentation button {
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: .7rem;
+    border-radius: 15px;
+    background-color: #3a65ff;
+    margin-top: 2rem;
+    transition: all .5s ease; }
+    @media screen and (max-width: 800px) {
+      #presentation button {
+        padding: 1.2rem; } }
+    #presentation button:hover {
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
+      padding-left: .8rem;
+      padding-right: .8rem; }
+      @media screen and (max-width: 800px) {
+        #presentation button:hover {
+          padding-left: 1.4rem;
+          padding-right: 1.4rem; } }
+    #presentation button p {
+      font-weight: 600;
+      font-size: 18px;
+      position: relative;
+      bottom: 7px;
+      color: #42fff4; }
+      #presentation button p i {
+        font-size: 35px;
+        margin-left: 15px;
+        position: relative;
+        top: 7px; }
+
+#aboutme {
+  padding: 2rem 5% 4rem 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  @media screen and (min-width: 1400px) {
+    #aboutme {
+      padding-left: 25%;
+      padding-right: 25%; } }
+  @media screen and (min-width: 1200px) and (max-width: 1400px) {
+    #aboutme {
+      padding-left: 23%;
+      padding-right: 23%; } }
+  #aboutme p {
+    text-align: center; }
+  #aboutme p.subtitle {
+    position: relative;
+    top: 2rem; }
+  #aboutme i {
+    display: block;
+    margin: 0 auto;
+    font-size: 7rem;
+    color: #3a65ff; }
+
+#experience {
+  padding: 2rem 5% 4rem 5%; }
+  @media screen and (min-width: 1400px) {
+    #experience {
+      padding-left: 25%;
+      padding-right: 25%; } }
+  @media screen and (min-width: 1200px) {
+    #experience {
+      padding-left: 25%;
+      padding-right: 25%; } }
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 2rem; }
+  @media screen and (min-width: 1200px) {
+    .tabs {
+      position: relative;
+      right: 1.2rem; }
+      .tabs:nth-child(2) {
+        position: relative;
+        right: 0rem;
+        justify-content: center; }
+        .tabs:nth-child(2) .tabs_button {
+          margin-right: 1.5rem; } }
+  .tabs .tabs_button,
+  .tabs .tabz_button {
+    transition: all .1s;
+    padding: 5px 15px 5px 15px;
+    border-radius: 25px;
+    background-color: #eeeeee; }
+    .tabs .tabs_button button,
+    .tabs .tabz_button button {
+      cursor: pointer; }
+  .tabs .tab-active {
+    background-color: #3a65ff;
+    padding: 5px 15px 5px 15px;
+    border-radius: 25px; }
+    .tabs .tab-active button {
+      color: white; }
+
+#myskills {
+  padding: 2rem 5% 4rem 5%; }
+  @media screen and (min-width: 1400px) {
+    #myskills {
+      padding-left: 25%;
+      padding-right: 25%; } }
+  @media screen and (min-width: 1200px) and (max-width: 1400px) {
+    #myskills {
+      padding-left: 25%;
+      padding-right: 25%; } }
+
+.tabs-content {
+  background-color: #f2f2f2;
+  height: 100%;
+  padding: 1rem;
+  border-radius: 25px; }
+  .tabs-content i.fa-database,
+  .tabs-content i.fa-php {
+    background-color: #0A1029;
+    color: white;
+    border-radius: 5px;
+    padding: .2rem; }
+    @media screen and (max-width: 800px) {
+      .tabs-content i.fa-database,
+      .tabs-content i.fa-php {
+        font-size: 2.9rem;
+        padding: .5rem; } }
+    @media screen and (min-width: 1200px) {
+      .tabs-content i.fa-database,
+      .tabs-content i.fa-php {
+        font-size: 3.5rem;
+        padding: .4rem; } }
+  @media screen and (max-width: 800px) {
+    .tabs-content i.fa-databas {
+      padding: .5rem;
+      font-size: 2.5rem; } }
+  @media screen and (min-width: 1200px) {
+    .tabs-content i.fa-databas {
+      padding: .5rem;
+      font-size: 3.5rem; } }
+
+.tab-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear; }
+  .tab-content p {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    margin: 1rem; }
+  .tab-content i {
+    margin-right: 10px;
+    font-size: 2rem; }
+    @media screen and (max-width: 800px) {
+      .tab-content i {
+        font-size: 4rem; } }
+    @media screen and (min-width: 1200px) {
+      .tab-content i {
+        font-size: 5rem; } }
+
+.tab-content-active {
+  height: 100%;
+  visibility: visible;
+  opacity: 1; }
+
+#projects {
+  padding: 2rem 5% 0 5%;
+  display: flex;
+  flex-direction: column; }
+  @media screen and (min-width: 1400px) {
+    #projects {
+      padding-left: 21%;
+      padding-right: 21%; } }
+  @media screen and (min-width: 1200px) and (max-width: 1400px) {
+    #projects {
+      padding-left: 20%;
+      padding-right: 20%; } }
+  #projects .projects_divs {
+    display: flex;
+    flex: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    transform: translateX(2%); }
+    @media screen and (min-width: 1400px) {
+      #projects .projects_divs {
+        position: relative;
+        right: .5rem; } }
+    #projects .projects_divs div {
+      margin: 1rem;
+      cursor: pointer;
+      overflow: hidden;
+      width: 245px;
+      height: 150px;
+      border-radius: 25px;
+      margin-right: 2rem; }
+      @media screen and (max-width: 800px) {
+        #projects .projects_divs div {
+          width: calc(245px*1.5);
+          width: 90%; } }
+      @media screen and (min-width: 1400px) {
+        #projects .projects_divs div {
+          width: calc(245px*1.4);
+          background-color: red; } }
+      #projects .projects_divs div:nth-child(1) {
+        background-color: #3a65ff; }
+      #projects .projects_divs div:nth-child(2) {
+        background-color: #3a65ff; }
+      #projects .projects_divs div:nth-child(3) {
+        background-color: #3a65ff; }
+      #projects .projects_divs div:nth-child(4) {
+        background-color: #dfdfdf; }
+        #projects .projects_divs div:nth-child(4) i {
+          float: none;
+          position: relative;
+          display: block;
+          top: 2.6rem;
+          text-align: center;
+          color: #909090; }
+          @media screen and (min-width: 1400px) {
+            #projects .projects_divs div:nth-child(4) i {
+              top: 2.3rem; } }
+      #projects .projects_divs div p {
+        font-size: 2.2rem;
+        font-weight: 800;
+        position: relative;
+        bottom: .6rem;
+        right: .2rem;
+        color: white;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); }
+      #projects .projects_divs div i {
+        float: right;
+        font-size: 4rem;
+        color: white;
+        font-weight: 800;
+        position: relative;
+        bottom: 1.5rem;
+        left: 5px;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); }
+        @media screen and (min-width: 1400px) {
+          #projects .projects_divs div i {
+            font-size: 5rem;
+            bottom: 2.8rem; } }
