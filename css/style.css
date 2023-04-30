@@ -111,7 +111,6 @@ header {
       header nav ul {
         align-items: center;
         flex-direction: column;
-        background-color: red;
         position: absolute;
         overflow: hidden;
         top: 3rem;
@@ -148,7 +147,7 @@ header {
 footer {
   margin-top: 5rem;
   padding-top: 3rem;
-  height: 60vh;
+  padding-bottom: 6rem;
   background-color: #3a65ff; }
   footer p.subtitle {
     color: #ffff; }
@@ -611,8 +610,7 @@ input[type="submit"] {
           width: 90%; } }
       @media screen and (min-width: 1400px) {
         #projects .projects_divs div {
-          width: calc(245px*1.4);
-          background-color: red; } }
+          width: calc(245px*1.4); } }
       #projects .projects_divs div:nth-child(1) {
         background-color: #3a65ff; }
       #projects .projects_divs div:nth-child(2) {
