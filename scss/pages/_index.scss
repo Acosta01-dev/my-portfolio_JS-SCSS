@@ -403,9 +403,9 @@
         flex-wrap: wrap;
         justify-content: center;
 
-        transform: translateX(2%);
 
         @media screen and (min-width: $desktop-large) {
+            transform: translateX(2%);
 
             position: relative;
             right: .5rem;
@@ -413,6 +413,7 @@
         }
 
         @media screen and (min-width: $desktop-small) and (max-width: $desktop-large) {}
+        transform: translateX(2%);
 
         div {
 
@@ -425,7 +426,7 @@
 
             width: 245px;
             height: 150px;
-            border-radius: 25px;
+            border-radius: 20px;
             margin-right: 2rem;
 
             @media screen and (max-width: $mobile-generic) {
@@ -499,11 +500,10 @@
                 font-size: 2.2rem;
                 font-weight: 800;
                 position: relative;
-                bottom: .6rem;
-                right: .2rem;
-
+                bottom: 0rem;
+                right: 0rem;
+                left: .5rem;
                 color: white;
-
                 text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
 
             }
@@ -514,14 +514,14 @@
                 color: white;
                 font-weight: 800;
                 position: relative;
-                bottom: 1.5rem;
-                left: 5px;
+                bottom: 2rem;
+                left: 0px;
 
                 text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
 
                 @media screen and (min-width: $desktop-large) {
                     font-size: 5rem;
-                    bottom: 2.8rem;
+                    bottom: 3.3rem;
                 }
 
             }
