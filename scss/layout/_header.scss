@@ -60,6 +60,9 @@ header {
 
     }
     nav {
+        @media screen and (max-width: $mobile-generic) {
+        }
+
         ul {               
             display: flex;
             @media screen and (max-width: $mobile-generic) {
@@ -67,14 +70,23 @@ header {
                 flex-direction: column;
                 position: absolute;
                 overflow: hidden;
-                top: 3rem;
+                top: 2.9rem;
                 width: 100%;
+
+                
             }
                 
                 li{
                     margin-left: 15px;
                     @media screen and (max-width: $mobile-generic) {
-                        margin: 1.1rem;
+                        padding: 1.1rem;
+                       
+                        margin-left: 0px;
+
+                        width: 100%;
+                        text-align: center;
+
+                       border-bottom: .5px solid gray;
                     }
                     a{
                         font-weight: 500;
@@ -94,7 +106,10 @@ header {
     max-height: 0;
     transition: all .5s;
 
+    background-color: rgb(245, 242, 242);
     align-items: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+     
 }
 .burguer_menu{
     position: fixed;
