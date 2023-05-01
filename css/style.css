@@ -496,7 +496,8 @@ input[type="submit"] {
     background-color: #eeeeee; }
     .tabs .tabs_button button,
     .tabs .tabz_button button {
-      cursor: pointer; }
+      cursor: pointer;
+      color: #4d4b4b; }
   .tabs .tab-active {
     background-color: #3a65ff;
     padding: 5px 15px 5px 15px;
