@@ -37,7 +37,7 @@ video {
   max-width: 100%; }
 
 body {
-  font-family: sans-serif;
+  y: sans-serif;
   font-size: 16px;
   line-height: 1.5;
   display: block;
@@ -45,7 +45,8 @@ body {
   background-color: #F6F9FF; }
 
 body, html {
-  color: #0A1029; }
+  color: #0A1029;
+  font-family: 'Roboto', sans-serif; }
 
 @media screen and (max-width: 800px) {
   .mobile {
@@ -125,7 +126,7 @@ header {
           text-align: center;
           border-bottom: .5px solid gray; } }
       header nav ul li a {
-        font-weight: 500;
+        font-weight: 400;
         color: #0A1029;
         text-decoration: none; }
 
@@ -352,6 +353,86 @@ input[type="submit"] {
   100% {
     background-color: #ccc; } }
 
+.project-item {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  margin-bottom: 5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden; }
+  .project-item .project-item_project {
+    background-color: #3a65ff;
+    width: 50%; }
+    @media screen and (max-width: 950px) {
+      .project-item .project-item_project {
+        width: 100%; } }
+  .project-item .project-header {
+    padding: .5em; }
+    .project-item .project-header h3 {
+      font-size: 1.5rem;
+      color: #fff; }
+  .project-item .project-footer li {
+    margin: .5rem;
+    margin-top: 0rem;
+    color: #3a65ff;
+    padding: .5rem .8rem;
+    background-color: #ffff;
+    border-radius: 5px; }
+  .project-item .project-item_desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    margin: 1.2rem 1.2rem 3rem 1rem; }
+    @media screen and (max-width: 950px) {
+      .project-item .project-item_desc {
+        width: 90%;
+        margin: 1rem; } }
+    .project-item .project-item_desc .project-item_desc-buttons {
+      display: flex;
+      justify-content: space-evenly; }
+      .project-item .project-item_desc .project-item_desc-buttons button {
+        padding: 1rem;
+        cursor: pointer;
+        border: 3px solid #3a65ff;
+        color: #3a65ff;
+        font-weight: 500;
+        border-radius: 15px;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); }
+        @media screen and (max-width: 950px) {
+          .project-item .project-item_desc .project-item_desc-buttons button {
+            margin-top: 2rem; } }
+        .project-item .project-item_desc .project-item_desc-buttons button i {
+          font-size: 1rem;
+          margin-left: .5rem; }
+        .project-item .project-item_desc .project-item_desc-buttons button:hover {
+          transition: all .5s;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
+        .project-item .project-item_desc .project-item_desc-buttons button:last-child {
+          background-color: #3a65ff;
+          color: #ffff; }
+
+.project-body img {
+  height: 40vh;
+  width: 100%; }
+
+.project-footer ul {
+  background-color: #3a65ff; }
+  .project-footer ul li {
+    display: inline-block; }
+
+.project-item {
+  min-height: 30vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row; }
+  .project-item:nth-child(even) {
+    flex-direction: row-reverse; }
+  @media screen and (max-width: 950px) {
+    .project-item {
+      flex-direction: column; }
+      .project-item:nth-child(even) {
+        flex-direction: column; } }
+
 #presentation {
   padding: 5.5rem 5% 4rem 5%;
   background-color: white; }
@@ -359,13 +440,15 @@ input[type="submit"] {
     #presentation {
       padding-left: 25%;
       padding-right: 25%;
-      padding-top: 9%;
+      padding-top: 10%;
       padding-bottom: 12%; } }
   @media screen and (min-width: 1200px) {
     #presentation {
       padding-left: 18%;
       padding-right: 18%;
-      padding-top: 13%;
+      padding-left: 20%;
+      padding-right: 20%;
+      padding-top: 14%;
       padding-bottom: 13%; } }
   #presentation .presentation_intro-text {
     display: grid;
@@ -512,7 +595,7 @@ input[type="submit"] {
       color: white; }
 
 #myskills {
-  padding: 2rem 5% 4rem 5%; }
+  padding: 4rem 5% 4rem 5%; }
   @media screen and (min-width: 1400px) {
     #myskills {
       padding-left: 25%;
@@ -521,6 +604,8 @@ input[type="submit"] {
     #myskills {
       padding-left: 25%;
       padding-right: 25%; } }
+  #myskills .tab-content p {
+    margin: 1rem; }
 
 .tabs-content {
   background-color: #f2f2f2;
@@ -563,9 +648,12 @@ input[type="submit"] {
   transition: visibility 0s, opacity 0.5s linear; }
   .tab-content p {
     display: flex;
-    align-items: center;
-    font-weight: 700;
-    margin: 1rem; }
+    align-items: center; }
+    .tab-content p span {
+      position: absolute;
+      left: 1rem;
+      right: 10px;
+      bottom: 1.2rem; }
   .tab-content i {
     margin-right: 10px;
     font-size: 2rem; }
@@ -582,7 +670,8 @@ input[type="submit"] {
   opacity: 1; }
 
 #projects {
-  padding: 2rem 5% 0 5%;
+  padding: 4rem 5% 4rem 5%;
+  overflow: hidden;
   display: flex;
   flex-direction: column; }
   @media screen and (min-width: 1400px) {
@@ -591,71 +680,40 @@ input[type="submit"] {
       padding-right: 21%; } }
   @media screen and (min-width: 1200px) and (max-width: 1400px) {
     #projects {
-      padding-left: 20%;
-      padding-right: 20%; } }
-  #projects .projects_divs {
+      padding-left: 21%;
+      padding-right: 21%; } }
+  #projects .tabs {
     display: flex;
-    flex: row;
-    flex-wrap: wrap;
     justify-content: center;
-    transform: translateX(2%); }
+    flex-wrap: wrap;
+    position: relative; }
+    #projects .tabs .tabs_button {
+      margin: .7rem; }
     @media screen and (min-width: 1400px) {
-      #projects .projects_divs {
-        transform: translateX(2%);
-        position: relative;
-        right: .5rem; } }
-    #projects .projects_divs div {
-      margin: 1rem;
-      cursor: pointer;
-      overflow: hidden;
-      width: 245px;
-      height: 150px;
-      border-radius: 20px;
-      margin-right: 2rem; }
-      @media screen and (max-width: 800px) {
-        #projects .projects_divs div {
-          width: calc(245px*1.5);
-          width: 90%; } }
-      @media screen and (min-width: 1400px) {
-        #projects .projects_divs div {
-          width: calc(245px*1.4); } }
-      #projects .projects_divs div:nth-child(1) {
-        background-color: #3a65ff; }
-      #projects .projects_divs div:nth-child(2) {
-        background-color: #3a65ff; }
-      #projects .projects_divs div:nth-child(3) {
-        background-color: #3a65ff; }
-      #projects .projects_divs div:nth-child(4) {
-        background-color: #dfdfdf; }
-        #projects .projects_divs div:nth-child(4) i {
-          float: none;
-          position: relative;
-          display: block;
-          top: 2.6rem;
-          text-align: center;
-          color: #909090; }
-          @media screen and (min-width: 1400px) {
-            #projects .projects_divs div:nth-child(4) i {
-              top: 2.3rem; } }
-      #projects .projects_divs div p {
-        font-size: 2.2rem;
-        font-weight: 800;
-        position: relative;
-        bottom: 0rem;
-        right: 0rem;
-        left: .5rem;
-        color: white;
-        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); }
-      #projects .projects_divs div i {
-        float: right;
-        font-size: 4rem;
-        color: white;
-        font-weight: 800;
-        position: relative;
-        bottom: 2rem;
-        left: 0px;
-        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); }
-        @media screen and (min-width: 1400px) {
-          #projects .projects_divs div i {
-            font-size: 5rem;
-            bottom: 3.3rem; } }
+      #projects .tabs .tabs_ {
+        margin: 1rem; }
+        #projects .tabs .tabs_ button p i {
+          margin-right: 10px; } }
+    #projects .tabs .tabs-content {
+      background-color: rgba(255, 255, 255, 0); }
+    @media screen and (max-width: 950px) {
+      #projects .tabs {
+        display: flex; }
+        #projects .tabs .tabs_button {
+          margin: 1rem;
+          padding: .5rem .5rem;
+          width: 30%; }
+          #projects .tabs .tabs_button button {
+            display: block;
+            margin: 0 auto; }
+            #projects .tabs .tabs_button button p {
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              justify-content: center;
+              margin: 0 auto;
+              font-size: 1rem; }
+              #projects .tabs .tabs_button button p i {
+                margin-bottom: .7rem;
+                margin-top: .5rem;
+                font-size: 1.5rem; } }

@@ -6,16 +6,18 @@
     @media screen and (min-width: $desktop-large) {
         @include padding-div(25%);
 
-        padding-top: 9%;
+        padding-top: 10%;
         padding-bottom: 12%;
-
     }
 
     @media screen and (min-width: $desktop-small) {
         @include padding-div(18%);
+        @include padding-div(20%);
 
-        padding-top: 13%;
+        padding-top: 14%;
         padding-bottom: 13%;
+
+
 
 
     }
@@ -257,7 +259,7 @@
 
 
             color: #4d4b4b;
-            
+
 
 
         }
@@ -276,7 +278,7 @@
 
 
 #myskills {
-    padding: 2rem 5% 4rem 5%;
+    padding: 4rem 5% 4rem 5%;
 
     @media screen and (min-width: $desktop-large) {
         @include padding-div(25%);
@@ -288,6 +290,13 @@
         @include padding-div(25%);
 
 
+    }
+
+
+    .tab-content{
+        p{
+            margin: 1rem;
+        }
     }
 }
 
@@ -330,6 +339,10 @@
             font-size: 3.5rem;
 
         }
+
+        span {
+            
+        }
     }
 }
 
@@ -349,9 +362,13 @@
     p {
         display: flex;
         align-items: center;
+        span{
+            position: absolute;
+            left: 1rem;
+            right: 10px;
+            bottom: 1.2rem;
+        }
 
-        font-weight: 700;
-        margin: 1rem;
     }
 
     i {
@@ -381,8 +398,8 @@
 
 
 #projects {
-    padding: 2rem 5% 0 5%;
-
+    padding: 4rem 5% 4rem 5%;
+    overflow: hidden; //Importante, evita que el footer quede con un margen blanco debajo suyo.
     display: flex;
     flex-direction: column;
 
@@ -393,138 +410,81 @@
     }
 
     @media screen and (min-width: $desktop-small) and (max-width: $desktop-large) {
-        @include padding-div(20%);
+        @include padding-div(21%);
     }
 
-    .projects_divs {
+    
 
+   
+    .tabs { //Botonoes Tabs , apariencia.
         display: flex;
-        flex: row;
-        flex-wrap: wrap;
         justify-content: center;
-
-
+        flex-wrap: wrap;
+        position: relative;
+        .tabs_button{
+            margin: .7rem;
+        }
         @media screen and (min-width: $desktop-large) {
-            transform: translateX(2%);
 
-            position: relative;
-            right: .5rem;
+            .tabs_ {
+                margin: 1rem;
+
+                button {
+                    p {
+                        i {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+
+            }
 
         }
 
-        @media screen and (min-width: $desktop-small) and (max-width: $desktop-large) {}
-        transform: translateX(2%);
-
-        div {
 
 
-            margin: 1rem;
-            cursor: pointer;
-            overflow: hidden;
+        .tabs-content {
+            background-color: rgba(255, 255, 255, 0);
 
 
+        }
 
-            width: 245px;
-            height: 150px;
-            border-radius: 20px;
-            margin-right: 2rem;
+        @media screen and (max-width: $mobile-big) {  //Mobile Look - Very Different
+            display: flex;
 
-            @media screen and (max-width: $mobile-generic) {
+            .tabs_button {
+                margin: 1rem;
 
-                width: calc(245px*1.5);
-                width: 90%;
-            }
+                padding: .5rem .5rem;
+                width: 30%;
 
-            @media screen and (min-width: $desktop-large) {
-                width: calc(245px*1.4);
-            }
-
-            $i : 1;
-
-            &:nth-child(#{$i}) {
-
-
-                background-color: $principal-color;
-
-                //   background-image: linear-gradient(to right, #3a65ff, #2d6cff, #2073ff, #1179ff, #007fff);
-            }
-
-            $i : $i+1;
-
-            &:nth-child(#{$i}) {
-
-
-
-                background-color: $principal-color;
-
-                //background-image: linear-gradient(to right, #474555, #494a5c, #4b4f62, #4d5569, #4e5a6f);
-            }
-
-            $i : $i+1;
-
-            &:nth-child(#{$i}) {
-                background-color: $principal-color;
-
-                //background-image: linear-gradient(to right, #ee0038, #f00049, #f1005a, #f0006a, #ed007a);
-            }
-
-            $i : $i+1;
-
-            &:nth-child(#{$i}) {
-                background-color: rgb(223, 223, 223);
-
-                //background-image: linear-gradient(to right, #ee0038, #f00049, #f1005a, #f0006a, #ed007a);
-
-                i {
-                    float: none;
-                    position: relative;
-
+                button {
                     display: block;
+                    margin: 0 auto;
 
+                    p {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        justify-content: center;
 
+                        margin: 0 auto;
+                        font-size: 1rem;
 
-                    top: 2.6rem;
-                    text-align: center;
-                    color: rgb(144, 144, 144);
+                        i {
+                            margin-bottom: .7rem;
+                            margin-top: .5rem;
+                            font-size: 1.5rem;
 
-                    @media screen and (min-width: $desktop-large) {
-                        top: 2.3rem;
+                        }
                     }
                 }
             }
 
-
-
-            p {
-
-                font-size: 2.2rem;
-                font-weight: 800;
-                position: relative;
-                bottom: 0rem;
-                right: 0rem;
-                left: .5rem;
-                color: white;
-                text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-
-            }
-
-            i {
-                float: right;
-                font-size: 4rem;
-                color: white;
-                font-weight: 800;
-                position: relative;
-                bottom: 2rem;
-                left: 0px;
-
-                text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-
-                @media screen and (min-width: $desktop-large) {
-                    font-size: 5rem;
-                    bottom: 3.3rem;
-                }
-
-            }
         }
+
+
     }
+
+    
 }
