@@ -462,7 +462,7 @@ input[type="submit"] {
     #presentation {
       padding-left: 20%;
       padding-right: 20%;
-      padding-top: 7.8%;
+      padding-top: 8.8%;
       padding-bottom: 14.5%; } }
   @media screen and (min-width: 1200px) and (max-width: 1400px) {
     #presentation {
@@ -571,7 +571,7 @@ input[type="submit"] {
   justify-content: center;
   align-items: center;
   position: relative;
-  right: 1.5rem;
+  right: 30px;
   bottom: .5rem; }
   @media screen and (max-width: 950px) {
     .scrolldown_animation {
