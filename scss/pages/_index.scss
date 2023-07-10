@@ -1,26 +1,22 @@
 #presentation {
     padding: 5.5rem 5% 4rem 5%;
     //margin-top: 3rem;
-    background-color: white;
+    // background-color: white;
+
+    height: 100vh;
 
     @media screen and (min-width: $desktop-large) {
-        @include padding-div(25%);
-
-        padding-top: 10%;
-        padding-bottom: 12%;
-    }
-
-    @media screen and (min-width: $desktop-small) {
-        @include padding-div(18%);
         @include padding-div(20%);
-
-        padding-top: 14%;
-        padding-bottom: 13%;
-
-
-
-
+        padding-top: 9.5%;
+        padding-bottom: 14.5%;
     }
+
+    @media screen and (min-width: $desktop-small) and (max-width: $desktop-large) {
+        @include padding-div(20%);
+        padding-top: 10.5%;
+        padding-bottom: 14.5%;
+    }
+
 
     .presentation_intro-text {
         display: grid;
@@ -36,6 +32,8 @@
             display: flex;
             flex-direction: column;
 
+            margin-top: 3vh;
+
             @media screen and (max-width: $mobile-generic) {
                 flex-direction: row;
 
@@ -47,6 +45,8 @@
                 cursor: pointer;
 
                 color: $principal-color;
+
+
                 font-size: 2rem;
 
 
@@ -68,6 +68,38 @@
 
         }
 
+        .presentation_intro-text_greetings {
+            h1 {
+                margin-top: 3vh;
+                margin-bottom: 5vh;
+               
+                @media screen and (max-width: $mobile-small) {
+                    font-size: 45px;
+                    margin-top: 1vh;
+                    margin-bottom: 1vh;
+
+                }
+            }
+
+            p {
+
+                margin-top: 5vh;
+                margin-bottom: 2vh;
+
+                @media screen and (max-width: $mobile-small) {
+                    margin-top: 0vh;
+
+                }
+
+            }
+
+            button {
+                p {
+                    margin: 0;
+                }
+            }
+        }
+
     }
 
     h1 {
@@ -86,7 +118,7 @@
 
 
         span {
-            font-weight: 800;
+            font-weight: 600;
         }
 
         span.typed-text {
@@ -143,7 +175,7 @@
         p {
 
 
-            font-weight: 600;
+            font-weight: 200;
             font-size: 18px;
 
             position: relative;
@@ -163,33 +195,17 @@
 
     }
 
+
+
 }
 
 #aboutme {
-    padding: 2rem 5% 4rem 5%;
+    scroll-margin-top: 100px;
+
+    padding: 0rem 5% 4rem 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    @media screen and (min-width: $desktop-large) {
-        @include padding-div(25%);
-
-
-    }
-
-    @media screen and (min-width: $desktop-small) and (max-width: $desktop-large) {
-        @include padding-div(23%);
-
-    }
-
-    p {
-        text-align: center;
-    }
-
-    p.subtitle {
-        position: relative;
-        top: 2rem;
-    }
 
     i {
         display: block;
@@ -197,7 +213,57 @@
         font-size: 7rem;
 
         color: $principal-color;
+        color: #6D6A7C;
     }
+
+    @media screen and (min-width: $desktop-large) {
+        @include padding-div(20%);
+        padding-top: 0rem;
+        padding-bottom: 5rem;
+
+        i {
+
+            font-size: 10rem;
+
+        }
+
+        .text {
+
+            font-size: 20px;
+
+        }
+    }
+
+    @media screen and (min-width: $desktop-small) and (max-width: $desktop-large) {
+        scroll-margin-top: 70px;
+
+
+        @include padding-div(20%);
+
+        padding-top: 0rem;
+        padding-bottom: 5rem;
+
+        i {
+
+            font-size: 10rem;
+
+        }
+
+        .text {
+
+            font-size: 20px;
+
+        }
+
+    }
+
+    p {
+        text-align: center;
+    }
+
+
+
+
 }
 
 
@@ -212,7 +278,7 @@
     }
 
     @media screen and (min-width: $desktop-small) {
-        @include padding-div(25%);
+        @include padding-div(19%);
 
 
     }
@@ -244,8 +310,7 @@
 
 
 
-    .tabs_button,
-    .tabz_button {
+    .tabs_button {
 
 
         transition: all .1s;
@@ -279,22 +344,25 @@
 
 #myskills {
     padding: 4rem 5% 4rem 5%;
+    scroll-margin-top: 40px;
 
     @media screen and (min-width: $desktop-large) {
         @include padding-div(25%);
 
-
+        padding-top: 7rem;
+        margin-bottom: 5.5rem;
     }
 
     @media screen and (min-width: $desktop-small) and (max-width: $desktop-large) {
-        @include padding-div(25%);
-
+        @include padding-div(19%);
+        padding-top: 7rem;
+        margin-bottom: 5.5rem;
 
     }
 
 
-    .tab-content{
-        p{
+    .tab-content {
+        p {
             margin: 1rem;
         }
     }
@@ -340,9 +408,7 @@
 
         }
 
-        span {
-            
-        }
+        span {}
     }
 }
 
@@ -362,7 +428,8 @@
     p {
         display: flex;
         align-items: center;
-        span{
+
+        span {
             position: absolute;
             left: 1rem;
             right: 10px;
@@ -374,7 +441,6 @@
     i {
         margin-right: 10px;
         font-size: 2rem;
-
 
         @media screen and (max-width: $mobile-generic) {
             font-size: 4rem;
@@ -399,6 +465,7 @@
 
 #projects {
     padding: 4rem 5% 4rem 5%;
+
     overflow: hidden; //Importante, evita que el footer quede con un margen blanco debajo suyo.
     display: flex;
     flex-direction: column;
@@ -410,20 +477,23 @@
     }
 
     @media screen and (min-width: $desktop-small) and (max-width: $desktop-large) {
-        @include padding-div(21%);
+        @include padding-div(19%);
     }
 
-    
 
-   
-    .tabs { //Botonoes Tabs , apariencia.
+
+
+    .tabs {
+        //Botonoes Tabs , apariencia.
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         position: relative;
-        .tabs_button{
+
+        .tabs_button {
             margin: .7rem;
         }
+
         @media screen and (min-width: $desktop-large) {
 
             .tabs_ {
@@ -449,7 +519,8 @@
 
         }
 
-        @media screen and (max-width: $mobile-big) {  //Mobile Look - Very Different
+        @media screen and (max-width: $mobile-big) {
+            //Mobile Look - Very Different
             display: flex;
 
             .tabs_button {
@@ -486,5 +557,5 @@
 
     }
 
-    
+
 }

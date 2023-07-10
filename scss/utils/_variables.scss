@@ -1,28 +1,20 @@
 $muted : #999;
 
+$principal-color: #6D6A7C;
 $principal-color: rgb(58, 101, 255);
 $secondary-color: rgb(66, 255, 244);
+
+$secondary-color: white;
+$principal-color: #6E57E0;
+
 
 @mixin padding-div($padding) {
    padding-left: $padding;
    padding-right: $padding;
 }
 
-$desktop-large:1400px;
-$desktop-small:1200px;
-$mobile-generic:800px;
-
-
-$mobile-big:950px;
-
-/*
-$fsize-mobile-h1:;
-$fsize-mobile-subtitle:;
-$fsize-mobile-text:;
-
-
-$fsize-desktop-h1:;
-$fsize-desktop-subtitle:;
-$fsize-desktop-text:;
-*/
-
+$desktop-large: 1400px;
+$desktop-small: 1200px;
+$mobile-generic: 800px;
+$mobile-big: 950px;
+$mobile-small: 375px;

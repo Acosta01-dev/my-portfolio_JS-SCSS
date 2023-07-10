@@ -1,13 +1,4 @@
-/*
-$fsize-mobile-h1:;
-$fsize-mobile-subtitle:;
-$fsize-mobile-text:;
-
-
-$fsize-desktop-h1:;
-$fsize-desktop-subtitle:;
-$fsize-desktop-text:;
-*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 *,
 *::before,
 *::after {
@@ -42,11 +33,15 @@ body {
   line-height: 1.5;
   display: block;
   margin: 0 auto;
-  background-color: #F6F9FF; }
+  /*
+  background-color: #F6F9FF;
+  */
+  background-color: #FBFBFE; }
 
-body, html {
+body,
+html {
   color: #0A1029;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Poppins', sans-serif; }
 
 @media screen and (max-width: 800px) {
   .mobile {
@@ -59,6 +54,30 @@ a {
 html {
   scroll-behavior: smooth; }
 
+p.subtitle {
+  position: relative;
+  color: black; }
+
+p.subtitle[data-unique="first_subtitle"] {
+  top: 2.5rem; }
+
+p.text {
+  color: #6D6A7C; }
+
+/*
+.subtitle{
+   
+    @media screen and (min-width: $desktop-large) {
+        
+
+    }
+
+    @media screen and (min-width: $desktop-small) and (max-width: $desktop-large) {
+       
+
+    }
+}
+*/
 p.subtitle {
   text-align: center;
   font-weight: 700;
@@ -155,7 +174,7 @@ footer {
   margin-top: 5rem;
   padding-top: 3rem;
   padding-bottom: 6rem;
-  background-color: #3a65ff; }
+  background-color: #6E57E0; }
   footer p.subtitle {
     color: #ffff; }
 
@@ -199,8 +218,8 @@ footer {
   background-color: #F6F9FF; }
 
 input[type="submit"] {
-  background-color: #42fff4;
-  color: #3a65ff;
+  background-color: white;
+  color: #6E57E0;
   font-weight: 300;
   padding: 1rem 2rem;
   border: none;
@@ -231,7 +250,7 @@ input[type="submit"] {
     content: '';
     position: absolute;
     width: 6px;
-    background-color: #3a65ff;
+    background-color: #6E57E0;
     top: 0;
     bottom: 0;
     left: 50%;
@@ -251,8 +270,8 @@ input[type="submit"] {
     width: 25px;
     height: 25px;
     right: -.75rem;
-    background-color: #42fff4;
-    border: 4px solid #3a65ff;
+    background-color: white;
+    border: 4px solid #6E57E0;
     top: 15px;
     border-radius: 50%;
     z-index: 1; }
@@ -360,7 +379,7 @@ input[type="submit"] {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   overflow: hidden; }
   .project-item .project-item_project {
-    background-color: #3a65ff;
+    background-color: #6E57E0;
     width: 50%; }
     @media screen and (max-width: 950px) {
       .project-item .project-item_project {
@@ -368,12 +387,14 @@ input[type="submit"] {
   .project-item .project-header {
     padding: .5em; }
     .project-item .project-header h3 {
+      margin-left: .5rem;
       font-size: 1.5rem;
+      font-weight: 300;
       color: #fff; }
   .project-item .project-footer li {
     margin: .5rem;
     margin-top: 0rem;
-    color: #3a65ff;
+    color: #6E57E0;
     padding: .5rem .8rem;
     background-color: #ffff;
     border-radius: 5px; }
@@ -393,8 +414,8 @@ input[type="submit"] {
       .project-item .project-item_desc .project-item_desc-buttons button {
         padding: 1rem;
         cursor: pointer;
-        border: 3px solid #3a65ff;
-        color: #3a65ff;
+        border: 3px solid #6E57E0;
+        color: #6E57E0;
         font-weight: 500;
         border-radius: 15px;
         box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); }
@@ -408,7 +429,7 @@ input[type="submit"] {
           transition: all .5s;
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
         .project-item .project-item_desc .project-item_desc-buttons button:last-child {
-          background-color: #3a65ff;
+          background-color: #6E57E0;
           color: #ffff; }
 
 .project-body img {
@@ -416,7 +437,7 @@ input[type="submit"] {
   width: 100%; }
 
 .project-footer ul {
-  background-color: #3a65ff; }
+  background-color: #6E57E0; }
   .project-footer ul li {
     display: inline-block; }
 
@@ -435,21 +456,19 @@ input[type="submit"] {
 
 #presentation {
   padding: 5.5rem 5% 4rem 5%;
-  background-color: white; }
+  height: 100vh; }
   @media screen and (min-width: 1400px) {
     #presentation {
-      padding-left: 25%;
-      padding-right: 25%;
-      padding-top: 10%;
-      padding-bottom: 12%; } }
-  @media screen and (min-width: 1200px) {
-    #presentation {
-      padding-left: 18%;
-      padding-right: 18%;
       padding-left: 20%;
       padding-right: 20%;
-      padding-top: 14%;
-      padding-bottom: 13%; } }
+      padding-top: 9.5%;
+      padding-bottom: 14.5%; } }
+  @media screen and (min-width: 1200px) and (max-width: 1400px) {
+    #presentation {
+      padding-left: 20%;
+      padding-right: 20%;
+      padding-top: 10.5%;
+      padding-bottom: 14.5%; } }
   #presentation .presentation_intro-text {
     display: grid;
     grid-template-columns: 0.1fr 1fr; }
@@ -458,13 +477,14 @@ input[type="submit"] {
         grid-template-columns: 1fr; } }
     #presentation .presentation_intro-text .presentation_intro-text_social {
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      margin-top: 3vh; }
       @media screen and (max-width: 800px) {
         #presentation .presentation_intro-text .presentation_intro-text_social {
           flex-direction: row; } }
       #presentation .presentation_intro-text .presentation_intro-text_social i {
         cursor: pointer;
-        color: #3a65ff;
+        color: #6E57E0;
         font-size: 2rem; }
         @media screen and (max-width: 800px) {
           #presentation .presentation_intro-text .presentation_intro-text_social i {
@@ -475,6 +495,22 @@ input[type="submit"] {
         @media screen and (min-width: 1200px) {
           #presentation .presentation_intro-text .presentation_intro-text_social i {
             font-size: 3rem; } }
+    #presentation .presentation_intro-text .presentation_intro-text_greetings h1 {
+      margin-top: 3vh;
+      margin-bottom: 5vh; }
+      @media screen and (max-width: 375px) {
+        #presentation .presentation_intro-text .presentation_intro-text_greetings h1 {
+          font-size: 45px;
+          margin-top: 1vh;
+          margin-bottom: 1vh; } }
+    #presentation .presentation_intro-text .presentation_intro-text_greetings p {
+      margin-top: 5vh;
+      margin-bottom: 2vh; }
+      @media screen and (max-width: 375px) {
+        #presentation .presentation_intro-text .presentation_intro-text_greetings p {
+          margin-top: 0vh; } }
+    #presentation .presentation_intro-text .presentation_intro-text_greetings button p {
+      margin: 0; }
   #presentation h1 {
     font-size: 2rem;
     font-weight: 100; }
@@ -485,7 +521,7 @@ input[type="submit"] {
       #presentation h1 {
         font-size: 4rem; } }
     #presentation h1 span {
-      font-weight: 800; }
+      font-weight: 600; }
     #presentation h1 span.typed-text {
       font-weight: 100; }
   #presentation p {
@@ -501,7 +537,7 @@ input[type="submit"] {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     padding: .7rem;
     border-radius: 15px;
-    background-color: #3a65ff;
+    background-color: #6E57E0;
     margin-top: 2rem;
     transition: all .5s ease; }
     @media screen and (max-width: 800px) {
@@ -516,11 +552,11 @@ input[type="submit"] {
           padding-left: 1.4rem;
           padding-right: 1.4rem; } }
     #presentation button p {
-      font-weight: 600;
+      font-weight: 200;
       font-size: 18px;
       position: relative;
       bottom: 7px;
-      color: #42fff4; }
+      color: white; }
       #presentation button p i {
         font-size: 35px;
         margin-left: 15px;
@@ -528,28 +564,40 @@ input[type="submit"] {
         top: 7px; }
 
 #aboutme {
-  padding: 2rem 5% 4rem 5%;
+  scroll-margin-top: 100px;
+  padding: 0rem 5% 4rem 5%;
   display: flex;
   flex-direction: column;
   justify-content: center; }
-  @media screen and (min-width: 1400px) {
-    #aboutme {
-      padding-left: 25%;
-      padding-right: 25%; } }
-  @media screen and (min-width: 1200px) and (max-width: 1400px) {
-    #aboutme {
-      padding-left: 23%;
-      padding-right: 23%; } }
-  #aboutme p {
-    text-align: center; }
-  #aboutme p.subtitle {
-    position: relative;
-    top: 2rem; }
   #aboutme i {
     display: block;
     margin: 0 auto;
     font-size: 7rem;
-    color: #3a65ff; }
+    color: #6E57E0;
+    color: #6D6A7C; }
+  @media screen and (min-width: 1400px) {
+    #aboutme {
+      padding-left: 20%;
+      padding-right: 20%;
+      padding-top: 0rem;
+      padding-bottom: 5rem; }
+      #aboutme i {
+        font-size: 10rem; }
+      #aboutme .text {
+        font-size: 20px; } }
+  @media screen and (min-width: 1200px) and (max-width: 1400px) {
+    #aboutme {
+      scroll-margin-top: 70px;
+      padding-left: 20%;
+      padding-right: 20%;
+      padding-top: 0rem;
+      padding-bottom: 5rem; }
+      #aboutme i {
+        font-size: 10rem; }
+      #aboutme .text {
+        font-size: 20px; } }
+  #aboutme p {
+    text-align: center; }
 
 #experience {
   padding: 2rem 5% 4rem 5%; }
@@ -559,8 +607,8 @@ input[type="submit"] {
       padding-right: 25%; } }
   @media screen and (min-width: 1200px) {
     #experience {
-      padding-left: 25%;
-      padding-right: 25%; } }
+      padding-left: 19%;
+      padding-right: 19%; } }
 
 .tabs {
   display: flex;
@@ -577,33 +625,36 @@ input[type="submit"] {
         justify-content: center; }
         .tabs:nth-child(2) .tabs_button {
           margin-right: 1.5rem; } }
-  .tabs .tabs_button,
-  .tabs .tabz_button {
+  .tabs .tabs_button {
     transition: all .1s;
     padding: 5px 15px 5px 15px;
     border-radius: 25px;
     background-color: #eeeeee; }
-    .tabs .tabs_button button,
-    .tabs .tabz_button button {
+    .tabs .tabs_button button {
       cursor: pointer;
       color: #4d4b4b; }
   .tabs .tab-active {
-    background-color: #3a65ff;
+    background-color: #6E57E0;
     padding: 5px 15px 5px 15px;
     border-radius: 25px; }
     .tabs .tab-active button {
       color: white; }
 
 #myskills {
-  padding: 4rem 5% 4rem 5%; }
+  padding: 4rem 5% 4rem 5%;
+  scroll-margin-top: 40px; }
   @media screen and (min-width: 1400px) {
     #myskills {
       padding-left: 25%;
-      padding-right: 25%; } }
+      padding-right: 25%;
+      padding-top: 7rem;
+      margin-bottom: 5.5rem; } }
   @media screen and (min-width: 1200px) and (max-width: 1400px) {
     #myskills {
-      padding-left: 25%;
-      padding-right: 25%; } }
+      padding-left: 19%;
+      padding-right: 19%;
+      padding-top: 7rem;
+      margin-bottom: 5.5rem; } }
   #myskills .tab-content p {
     margin: 1rem; }
 
@@ -680,8 +731,8 @@ input[type="submit"] {
       padding-right: 21%; } }
   @media screen and (min-width: 1200px) and (max-width: 1400px) {
     #projects {
-      padding-left: 21%;
-      padding-right: 21%; } }
+      padding-left: 19%;
+      padding-right: 19%; } }
   #projects .tabs {
     display: flex;
     justify-content: center;
