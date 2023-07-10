@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 *,
 *::before,
@@ -562,6 +563,38 @@ input[type="submit"] {
         margin-left: 15px;
         position: relative;
         top: 7px; }
+  #presentation .scrolldown_animation {
+    width: 100vw;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 1.2rem;
+    bottom: .5rem; }
+    #presentation .scrolldown_animation span {
+      width: 5px;
+      height: 20px;
+      background: black;
+      border-radius: 5px;
+      margin: 3px;
+      animation: move 1.1s infinite ease-in-out; }
+      @media screen and (max-height: 680px) {
+        #presentation .scrolldown_animation span {
+          /* Estilos para pantallas con altura máxima de 600px (ejemplo: dispositivos móviles en orientación vertical) */
+          background: rgba(255, 255, 0, 0); } }
+    #presentation .scrolldown_animation span:nth-of-type(1) {
+      transform: rotate(-45deg); }
+    #presentation .scrolldown_animation span:nth-of-type(2) {
+      transform: rotate(45deg); }
+
+@keyframes move {
+  0% {
+    margin-top: 0; }
+  50% {
+    margin-top: 100px; }
+  100% {
+    margin-top: 0; } }
 
 #aboutme {
   scroll-margin-top: 100px;
