@@ -1,10 +1,13 @@
 @charset "UTF-8";
+/* Global Styles */
+/* Box-sizing */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 *,
 *::before,
 *::after {
   box-sizing: border-box; }
 
+/* Reset Styles */
 * {
   margin: 0;
   padding: 0;
@@ -14,77 +17,73 @@
   vertical-align: baseline;
   background: transparent; }
 
+/* Remove list styles from ul and ol */
 ul,
 ol {
   list-style: none; }
 
+/* Default link styles */
 a {
   color: inherit;
   text-decoration: none; }
 
+/* Ensure images, embeds, objects, and videos are responsive */
 img,
 embed,
 object,
 video {
   max-width: 100%; }
 
+/* Body Styles */
 body {
-  y: sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   line-height: 1.5;
   display: block;
   margin: 0 auto;
-  /*
-  background-color: #F6F9FF;
-  */
   background-color: #FBFBFE; }
+  @media screen and (min-width: 1200px) {
+    body {
+      /* Add styles for screens larger than desktop-small breakpoint */ } }
 
+/* Text Styles */
 body,
 html {
-  color: #0A1029;
-  font-family: 'Poppins', sans-serif; }
+  color: #0A1029; }
 
+/* Mobile Styles */
 @media screen and (max-width: 800px) {
   .mobile {
     display: block; } }
 
+/* Link Styles */
 a {
   color: #3a65ff;
   text-decoration: underline; }
 
+/* HTML Scroll Behavior */
 html {
   scroll-behavior: smooth; }
 
 p.subtitle {
   position: relative;
-  color: black; }
-
-p.subtitle[data-unique="first_subtitle"] {
-  top: 2.5rem; }
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #0A1029; }
+  p.subtitle[data-unique="first_subtitle"] {
+    top: 2.5rem; }
 
 p.text {
   color: #6D6A7C; }
 
-/*
-.subtitle{
-   
-    @media screen and (min-width: $desktop-large) {
-        
-
-    }
-
-    @media screen and (min-width: $desktop-small) and (max-width: $desktop-large) {
-       
-
-    }
-}
-*/
 p.subtitle {
   text-align: center;
   font-weight: 700;
   margin-bottom: 1rem;
   color: #0A1029; }
 
+/* Header Styles */
 header {
   height: 3rem;
   width: 100%;
@@ -98,7 +97,12 @@ header {
   z-index: 1111;
   top: 0;
   left: 0;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); }
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  /* Media Query for desktop-large screens */
+  /* Media Query for desktop-small to desktop-large screens */
+  /* Header Logo Styles */
+  /* Media Query for mobile-generic screens */
+  /* Navigation Styles */ }
   @media screen and (min-width: 1400px) {
     header {
       padding-left: 20%;
@@ -108,7 +112,9 @@ header {
       padding-left: 25%;
       padding-right: 25%; } }
   header .header_logo {
-    cursor: pointer; }
+    cursor: pointer;
+    /* Media Query for mobile-generic screens */
+    /* Media Query for desktop-large screens */ }
     header .header_logo a {
       color: #0A1029;
       font-size: 2rem; }
@@ -127,7 +133,8 @@ header {
       align-items: baseline;
       padding: 0px; } }
   header nav ul {
-    display: flex; }
+    display: flex;
+    /* Media Query for mobile-generic screens */ }
     @media screen and (max-width: 800px) {
       header nav ul {
         align-items: center;
@@ -137,7 +144,8 @@ header {
         top: 2.9rem;
         width: 100%; } }
     header nav ul li {
-      margin-left: 15px; }
+      margin-left: 15px;
+      /* Media Query for mobile-generic screens */ }
       @media screen and (max-width: 800px) {
         header nav ul li {
           padding: 1.1rem;
@@ -150,6 +158,7 @@ header {
         color: #0A1029;
         text-decoration: none; }
 
+/* Mobile Nav Styles */
 #mobile-nav {
   max-height: 0;
   transition: all .5s;
@@ -157,16 +166,19 @@ header {
   align-items: center;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); }
 
+/* Burger Menu Styles */
 .burguer_menu {
   position: fixed;
   right: 1rem;
   top: 0;
   transition: all .5s;
-  display: none; }
+  display: none;
+  /* Media Query for mobile-generic screens */ }
   @media screen and (max-width: 800px) {
     .burguer_menu {
       display: block; } }
 
+/* Burger Menu Icon Styles */
 #burguer_menu-icon {
   cursor: pointer;
   font-size: 2rem; }

@@ -1,3 +1,4 @@
+/* Header Styles */
 header {
     height: 3rem;
     width: 100%;
@@ -17,29 +18,30 @@ header {
 
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 
+    /* Media Query for desktop-large screens */
     @media screen and (min-width: $desktop-large) {
         @include padding-div(20%);
 
     }
+    /* Media Query for desktop-small to desktop-large screens */
     @media screen and (min-width: $desktop-small) and (max-width: $desktop-large){
-        
         @include padding-div(25%);
     }
 
-
+    /* Header Logo Styles */
     .header_logo {
         a{
             color: #0A1029;
-             
             font-size: 2rem;
         }
         cursor: pointer;
+        /* Media Query for mobile-generic screens */
         @media screen and (max-width: $mobile-generic) {
             padding-left: 10px;
             padding-right: 10px;
-
         }
 
+        /* Media Query for desktop-large screens */
         @media screen and (min-width: $desktop-large) {
            img{
             height: 2rem;
@@ -47,24 +49,25 @@ header {
            }
     
         }
-        @media screen and (min-width: $desktop-small) and (max-width: $desktop-large){
-          
-        }
-
+     
     }
+
+    /* Media Query for mobile-generic screens */
     @media screen and (max-width: $mobile-generic) {
         flex-direction: column;
         justify-content: left;
-        align-items:baseline;
+        align-items: baseline;
         padding: 0px;
-
     }
-    nav {
-        @media screen and (max-width: $mobile-generic) {
-        }
 
-        ul {               
+    /* Navigation Styles */
+    nav {
+    
+
+        ul {
             display: flex;
+            
+            /* Media Query for mobile-generic screens */
             @media screen and (max-width: $mobile-generic) {
                 align-items: center;
                 flex-direction: column;
@@ -72,62 +75,53 @@ header {
                 overflow: hidden;
                 top: 2.9rem;
                 width: 100%;
-
-                
             }
                 
-                li{
-                    margin-left: 15px;
-                    @media screen and (max-width: $mobile-generic) {
-                        padding: 1.1rem;
-                       
-                        margin-left: 0px;
-
-                        width: 100%;
-                        text-align: center;
-
-                       border-bottom: .5px solid gray;
-                    }
-                    a{
-                        font-weight: 400;
-                        color: #0A1029;
-                        text-decoration: none;
-
-                    }
-                    
+            li{
+                margin-left: 15px;
+                /* Media Query for mobile-generic screens */
+                @media screen and (max-width: $mobile-generic) {
+                    padding: 1.1rem;
+                    margin-left: 0px;
+                    width: 100%;
+                    text-align: center;
+                    border-bottom: .5px solid gray;
                 }
-           
-          
+                a{
+                    font-weight: 400;
+                    color: #0A1029;
+                    text-decoration: none;
+                }
+            }
         }
     }
-
 }
+
+/* Mobile Nav Styles */
 #mobile-nav{
     max-height: 0;
     transition: all .5s;
-
     background-color: rgb(245, 242, 242);
     align-items: center;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-     
 }
+
+/* Burger Menu Styles */
 .burguer_menu{
     position: fixed;
     right: 1rem;
     top:0;
-
     transition: all .5s;
-
     display: none;
+
+    /* Media Query for mobile-generic screens */
     @media screen and (max-width: $mobile-generic) {
         display: block;
     }
 }
+
+/* Burger Menu Icon Styles */
 #burguer_menu-icon {
     cursor: pointer;
     font-size: 2rem;
-
-
 }
-
-

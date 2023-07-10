@@ -1,29 +1,21 @@
+// Import Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
+// Styles for subtitle elements
 p.subtitle {
     position: relative;
-    color: black;
-}
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 1rem;
 
-p.subtitle[data-unique="first_subtitle"]{
-    top: 2.5rem;
-}
+    color: #0A1029;
 
-p.text{
-    color: #6D6A7C;
-}
-
-/*
-.subtitle{
-   
-    @media screen and (min-width: $desktop-large) {
-        
-
-    }
-
-    @media screen and (min-width: $desktop-small) and (max-width: $desktop-large) {
-       
-
+    &[data-unique="first_subtitle"] {
+        top: 2.5rem; // Top offset of 2.5rem only for the first subtitle
     }
 }
-*/
+
+// Styles for regular text elements
+p.text {
+    color: #6D6A7C; // Text color #6D6A7C
+}

@@ -1,9 +1,13 @@
+/* Global Styles */
+
+/* Box-sizing */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* Reset Styles */
 * {
   margin: 0;
   padding: 0;
@@ -14,16 +18,19 @@
   background: transparent;
 }
 
+/* Remove list styles from ul and ol */
 ul,
 ol {
   list-style: none;
 }
 
+/* Default link styles */
 a {
   color: inherit;
   text-decoration: none;
 }
 
+/* Ensure images, embeds, objects, and videos are responsive */
 img,
 embed,
 object,
@@ -31,44 +38,40 @@ video {
   max-width: 100%;
 }
 
+/* Body Styles */
 body {
-  y: sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   line-height: 1.5;
-
   display: block;
   margin: 0 auto;
-
-  /*
-  background-color: #F6F9FF;
-  */
-
   background-color: #FBFBFE;
  
-  @media screen and (min-width: $desktop-small) {}
+  @media screen and (min-width: $desktop-small) {
+    /* Add styles for screens larger than desktop-small breakpoint */
+  }
 }
 
+/* Text Styles */
 body,
 html {
   color: #0A1029;
-//  font-family: 'Roboto', sans-serif;
-  font-family: 'Poppins', sans-serif;
-
 }
 
+/* Mobile Styles */
 .mobile {
   @media screen and (max-width: $mobile-generic) {
     display: block;
   }
 }
 
+/* Link Styles */
 a {
   color: rgb(58, 101, 255);
   text-decoration: underline;
 }
 
+/* HTML Scroll Behavior */
 html {
   scroll-behavior: smooth;
-
 }
-
