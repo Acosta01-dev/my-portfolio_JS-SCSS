@@ -77,12 +77,6 @@ p.subtitle {
 p.text {
   color: #6D6A7C; }
 
-p.subtitle {
-  text-align: center;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #0A1029; }
-
 /* Header Styles */
 header {
   height: 3rem;
@@ -447,7 +441,8 @@ input[type="submit"] {
 
 .project-body img {
   height: 40vh;
-  width: 100%; }
+  width: 100%;
+  object-fit: fill; }
 
 .project-footer ul {
   background-color: #6E57E0; }
