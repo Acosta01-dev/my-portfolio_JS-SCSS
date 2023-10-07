@@ -1,3 +1,5 @@
+//////////////////////////////BURGUER MENU//////////////////////////////////////////
+
 // Get the burger button element and mobile navigation element
 const burguer_btn = document.getElementsByClassName('burguer_menu')[0];
 const mobile_nav = document.getElementById('mobile-nav');
@@ -22,9 +24,7 @@ burguer_btn.addEventListener('click', function () {
   }
 });
 
-
-
-////////////////////////////////////////////////////////////////////////
+//////////////////////////////TABS//////////////////////////////////////////
 
 // Get all the tabs sections
 const tabsSections = document.querySelectorAll('.tabs-section');
@@ -52,12 +52,7 @@ tabsSections.forEach(section => {
   });
 });
 
-
-
-
-////////////////////////////////////////////////////////////////////////
-
-
+///////////////////////////////TYPING EFFECT/////////////////////////////////////////
 
 // Get the elements from the DOM
 const typedTextSpan = document.querySelector(".typed-text");
@@ -148,7 +143,7 @@ checkboxes.forEach(checkbox => {
   });
 });
 
-////////////////////////////////////////////////////////////////////////
+///////////////////////////////EMAIL JS/////////////////////////////////////////
 
 const btn = document.getElementById('button');
 document.getElementById('form').addEventListener('submit', function(event) {
