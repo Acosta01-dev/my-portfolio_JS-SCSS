@@ -30,14 +30,14 @@
 
     .project-footer {
         li {
-            
+
             margin: .5rem;
             margin-top: 0rem;
             color: $principal-color;
             padding: .5rem .8rem;
             background-color: #ffff;
             border-radius: 5px;
-    
+
         }
     }
 
@@ -51,8 +51,9 @@
         @media screen and (max-width: $mobile-big) {
             width: 90%;
             margin: 1rem;
-            
+
         }
+
         .project-item_desc-buttons {
             display: flex;
             justify-content: space-evenly;
@@ -66,10 +67,12 @@
                 font-weight: 500;
                 border-radius: 15px;
                 box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+
                 @media screen and (max-width: $mobile-big) {
-                   margin-top: 2rem;
-                    
+                    margin-top: 2rem;
+
                 }
+
                 i {
                     font-size: 1rem;
                     margin-left: .5rem;
@@ -95,15 +98,17 @@
 .project-body {
     img {
         height: 40vh;
+        
         width: 100%;
-
-        object-fit: fill;
+       
+        object-fit: cover;
     }
 }
 
 .project-footer {
     ul {
         background-color: $principal-color;
+
         li {
             display: inline-block;
         }

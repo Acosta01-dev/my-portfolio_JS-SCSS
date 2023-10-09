@@ -442,7 +442,7 @@ input[type="submit"] {
 .project-body img {
   height: 40vh;
   width: 100%;
-  object-fit: fill; }
+  object-fit: cover; }
 
 .project-footer ul {
   background-color: #6E57E0; }
