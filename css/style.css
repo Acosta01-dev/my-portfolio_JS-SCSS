@@ -466,7 +466,7 @@ input[type="submit"] {
 
 #presentation {
   padding: 5.5rem 5% 4rem 5%;
-  height: 100svh; }
+  height: 100dvh; }
   @media screen and (min-width: 1400px) {
     #presentation {
       padding-left: 20%;
