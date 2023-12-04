@@ -16,3 +16,5 @@ Welcome to my Full-Stack Portfolio Website! This website serves as a showcase of
 
 - **Contact Information:**
   - Easily reach out to me through the contact form or find links to my professional profiles on LinkedIn, GitHub, and other social platforms.
+
+![portfolio](https://github.com/Acosta01-dev/My-Portfolio/assets/79601880/d425f1b5-0d74-4606-921f-70d0df105fe7)
