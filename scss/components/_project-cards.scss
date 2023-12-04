@@ -94,14 +94,14 @@
     }
 }
 
-
 .project-body {
+    object-fit: cover;
     img {
-        height: 40vh;
+        height: 20rem;
         
         width: 100%;
        
-        object-fit: cover;
+        object-fit: inherit;
     }
 }
 

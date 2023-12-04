@@ -439,10 +439,12 @@ input[type="submit"] {
           background-color: #6E57E0;
           color: #ffff; }
 
-.project-body img {
-  height: 40vh;
-  width: 100%;
+.project-body {
   object-fit: cover; }
+  .project-body img {
+    height: 20rem;
+    width: 100%;
+    object-fit: inherit; }
 
 .project-footer ul {
   background-color: #6E57E0; }

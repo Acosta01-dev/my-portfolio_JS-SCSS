@@ -202,10 +202,12 @@
     width: 100vw;
     height: 130px;
     display: none;
+
     @media screen and (max-width: $mobile-big) {
         display: flex;
 
     }
+
     justify-content: center;
     align-items: center;
 
@@ -214,7 +216,7 @@
     bottom: .5rem;
 
 
-  
+
     span {
         width: 5px;
         height: 20px;
@@ -321,8 +323,6 @@
 
 }
 
-
-
 #experience {
     padding: 2rem 5% 4rem 5%;
 
@@ -338,7 +338,6 @@
 
     }
 }
-
 
 .tabs {
     display: flex;
@@ -395,7 +394,6 @@
         }
     }
 }
-
 
 #myskills {
     padding: 4rem 5% 4rem 5%;
@@ -509,14 +507,11 @@
 
 }
 
-
-
 .tab-content-active {
     height: 100%;
     visibility: visible;
     opacity: 1;
 }
-
 
 #projects {
     padding: 4rem 5% 4rem 5%;
@@ -534,9 +529,6 @@
     @media screen and (min-width: $desktop-small) and (max-width: $desktop-large) {
         @include padding-div(19%);
     }
-
-
-
 
     .tabs {
         //Botonoes Tabs , apariencia.
@@ -566,12 +558,8 @@
 
         }
 
-
-
         .tabs-content {
             background-color: rgba(255, 255, 255, 0);
-
-
         }
 
         @media screen and (max-width: $mobile-big) {
@@ -609,8 +597,6 @@
 
         }
 
-
     }
-
 
 }
