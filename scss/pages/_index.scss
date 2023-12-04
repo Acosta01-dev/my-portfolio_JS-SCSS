@@ -3,15 +3,18 @@
     //margin-top: 3rem;
     // background-color: white;
 
-    height: 100vh;
+   
+    height: calc(100vh - 56px); /* Resta la altura de la barra de dirección */
 
     @media screen and (min-width: $desktop-large) {
+        height: 100vh;
         @include padding-div(20%);
         padding-top: 8.8%;
         padding-bottom: 14.5%;
     }
 
     @media screen and (min-width: $desktop-small) and (max-width: $desktop-large) {
+        height: 100vh;
         @include padding-div(20%);
         padding-top: 10.5%;
         padding-bottom: 14.5%;
