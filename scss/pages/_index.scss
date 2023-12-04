@@ -4,17 +4,17 @@
     // background-color: white;
 
    
-    height: calc(100vh - 56px); /* Resta la altura de la barra de dirección */
+    height: 100svh;
 
     @media screen and (min-width: $desktop-large) {
-        height: 100vh;
+       
         @include padding-div(20%);
         padding-top: 8.8%;
         padding-bottom: 14.5%;
     }
 
     @media screen and (min-width: $desktop-small) and (max-width: $desktop-large) {
-        height: 100vh;
+       
         @include padding-div(20%);
         padding-top: 10.5%;
         padding-bottom: 14.5%;
@@ -25,25 +25,17 @@
         display: grid;
         grid-template-columns: 0.1fr 1fr;
 
-
         @media screen and (max-width: $mobile-generic) {
             grid-template-columns: 1fr;
-
         }
 
         .presentation_intro-text_social {
             display: flex;
             flex-direction: column;
-
             margin-top: 3vh;
-
             @media screen and (max-width: $mobile-generic) {
                 flex-direction: row;
-
-
             }
-
-
             i {
                 cursor: pointer;
 

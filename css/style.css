@@ -466,18 +466,15 @@ input[type="submit"] {
 
 #presentation {
   padding: 5.5rem 5% 4rem 5%;
-  height: calc(100vh - 56px);
-  /* Resta la altura de la barra de dirección */ }
+  height: 100svh; }
   @media screen and (min-width: 1400px) {
     #presentation {
-      height: 100vh;
       padding-left: 20%;
       padding-right: 20%;
       padding-top: 8.8%;
       padding-bottom: 14.5%; } }
   @media screen and (min-width: 1200px) and (max-width: 1400px) {
     #presentation {
-      height: 100vh;
       padding-left: 20%;
       padding-right: 20%;
       padding-top: 10.5%;
