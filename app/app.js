@@ -1,3 +1,10 @@
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+window.addEventListener('resize', () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+
 //////////////////////////////BURGUER MENU//////////////////////////////////////////
 
 // Get the burger button element and mobile navigation element
@@ -71,52 +78,52 @@ let charIndex = 0; // Index of the current character in the current text
 
 // Function for typing effect
 function type() {
-    if (charIndex < textArray[textArrayIndex].length) {
-        // Check if the cursor span does not have the "typing" class and add it
-        if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+  if (charIndex < textArray[textArrayIndex].length) {
+    // Check if the cursor span does not have the "typing" class and add it
+    if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
 
-        // Append the next character to the typed text
-        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    // Append the next character to the typed text
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
 
-        charIndex++; // Increment the character index
+    charIndex++; // Increment the character index
 
-        // Call the type function again after a delay
-        setTimeout(type, typingDelay);
-    }
-    else {
-        cursorSpan.classList.remove("typing"); // Remove the "typing" class from the cursor span
-        setTimeout(erase, newTextDelay); // Call the erase function after a delay
-    }
+    // Call the type function again after a delay
+    setTimeout(type, typingDelay);
+  }
+  else {
+    cursorSpan.classList.remove("typing"); // Remove the "typing" class from the cursor span
+    setTimeout(erase, newTextDelay); // Call the erase function after a delay
+  }
 }
 
 // Function for erasing effect
 function erase() {
-    if (charIndex > 0) {
-        // Check if the cursor span does not have the "typing" class and add it
-        if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+  if (charIndex > 0) {
+    // Check if the cursor span does not have the "typing" class and add it
+    if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
 
-        // Remove the last character from the typed text
-        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+    // Remove the last character from the typed text
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
 
-        charIndex--; // Decrement the character index
+    charIndex--; // Decrement the character index
 
-        // Call the erase function again after a delay
-        setTimeout(erase, erasingDelay);
-    }
-    else {
-        cursorSpan.classList.remove("typing"); // Remove the "typing" class from the cursor span
-        textArrayIndex++; // Increment the text index
+    // Call the erase function again after a delay
+    setTimeout(erase, erasingDelay);
+  }
+  else {
+    cursorSpan.classList.remove("typing"); // Remove the "typing" class from the cursor span
+    textArrayIndex++; // Increment the text index
 
-        // Reset the text index if it exceeds the length of the array
-        if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+    // Reset the text index if it exceeds the length of the array
+    if (textArrayIndex >= textArray.length) textArrayIndex = 0;
 
-        setTimeout(type, typingDelay + 1100); // Call the type function after a delay
-    }
+    setTimeout(type, typingDelay + 1100); // Call the type function after a delay
+  }
 }
 
 // Event listener to start the effect when the DOM is loaded
 document.addEventListener("DOMContentLoaded", function () {
-    if (textArray.length) setTimeout(type, newTextDelay + 250);
+  if (textArray.length) setTimeout(type, newTextDelay + 250);
 });
 
 
@@ -146,7 +153,7 @@ checkboxes.forEach(checkbox => {
 ///////////////////////////////EMAIL JS/////////////////////////////////////////
 
 const btn = document.getElementById('button');
-document.getElementById('form').addEventListener('submit', function(event) {
+document.getElementById('form').addEventListener('submit', function (event) {
   event.preventDefault();
 
   btn.value = 'Sending...';
