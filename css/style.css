@@ -49,7 +49,8 @@ body {
 /* Text Styles */
 body,
 html {
-  color: #0A1029; }
+  color: #0A1029;
+  overflow-x: hidden; }
 
 /* Mobile Styles */
 @media screen and (max-width: 800px) {
@@ -94,9 +95,7 @@ header {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   /* Media Query for desktop-large screens */
   /* Media Query for desktop-small to desktop-large screens */
-  /* Header Logo Styles */
-  /* Media Query for mobile-generic screens */
-  /* Navigation Styles */ }
+  /* Header Logo Styles */ }
   @media screen and (min-width: 1400px) {
     header {
       padding-left: 20%;
@@ -126,9 +125,43 @@ header {
       justify-content: left;
       align-items: baseline;
       padding: 0px; } }
-  header nav ul {
+  header .language_btn {
+    cursor: pointer; }
+    @media screen and (max-width: 800px) {
+      header .language_btn {
+        display: none; } }
+    header .language_btn-text i {
+      transition: all .2s; }
+    header .language_btn-content {
+      display: flex;
+      flex-direction: column;
+      background-color: #6E57E0;
+      overflow: hidden;
+      max-height: 0px;
+      position: absolute;
+      margin-top: 1rem;
+      width: 5rem;
+      border-radius: 5px; }
+      header .language_btn-content a {
+        padding: 5px;
+        color: #ffff; }
+        header .language_btn-content a:hover {
+          background-color: #5e47cc; }
+  header .language_btn_mobile {
     display: flex;
-    /* Media Query for mobile-generic screens */ }
+    position: absolute;
+    top: 11px;
+    right: 4rem; }
+    @media screen and (min-width: 800px) {
+      header .language_btn_mobile {
+        display: none; } }
+    header .language_btn_mobile .language_btn-content {
+      margin-top: 38px;
+      background-color: #6E57E0;
+      display: flex;
+      flex-direction: column; }
+  header nav ul {
+    display: flex; }
     @media screen and (max-width: 800px) {
       header nav ul {
         align-items: center;
@@ -139,7 +172,8 @@ header {
         width: 100%; } }
     header nav ul li {
       margin-left: 15px;
-      /* Media Query for mobile-generic screens */ }
+      height: 100%;
+      padding: .5rem; }
       @media screen and (max-width: 800px) {
         header nav ul li {
           padding: 1.1rem;
@@ -147,6 +181,12 @@ header {
           width: 100%;
           text-align: center;
           border-bottom: .5px solid gray; } }
+      @media screen and (min-width: 800px) {
+        header nav ul li:hover {
+          background-color: #6E57E0;
+          border-radius: 5px; }
+          header nav ul li:hover a {
+            color: #ffff; } }
       header nav ul li a {
         font-weight: 400;
         color: #0A1029;
@@ -180,10 +220,30 @@ header {
 footer {
   margin-top: 5rem;
   padding-top: 3rem;
-  padding-bottom: 6rem;
+  padding-bottom: 3rem;
   background-color: #6E57E0; }
+  @media screen and (max-width: 800px) {
+    footer {
+      padding-bottom: 2rem; } }
   footer p.subtitle {
     color: #ffff; }
+  footer .footer-links {
+    display: flex;
+    width: 20%;
+    margin: 0 auto;
+    margin-top: 3%;
+    justify-content: space-evenly; }
+    footer .footer-links a {
+      background-color: white;
+      border-radius: 50px;
+      padding: 5px 15px;
+      font-size: 2rem;
+      margin: 5px 10px;
+      color: #6E57E0;
+      text-decoration: none; }
+      footer .footer-links a i {
+        position: relative;
+        top: 1px; }
 
 @media screen and (max-width: 800px) {
   #form {
@@ -242,7 +302,7 @@ input[type="submit"] {
       grid-template-columns: 1fr; } }
 
 #message {
-  height: 5rem; }
+  padding: 5px 5px 5rem 5px; }
 
 .timeline {
   position: relative;
@@ -485,93 +545,90 @@ input[type="submit"] {
     @media screen and (max-width: 800px) {
       #presentation .presentation_intro-text {
         grid-template-columns: 1fr; } }
-    #presentation .presentation_intro-text .presentation_intro-text_social {
+    #presentation .presentation_intro-text_social {
       display: flex;
       flex-direction: column;
       margin-top: 3vh; }
       @media screen and (max-width: 800px) {
-        #presentation .presentation_intro-text .presentation_intro-text_social {
+        #presentation .presentation_intro-text_social {
           flex-direction: row; } }
-      #presentation .presentation_intro-text .presentation_intro-text_social i {
+      #presentation .presentation_intro-text_social i {
         cursor: pointer;
         color: #6E57E0;
         font-size: 2rem; }
         @media screen and (max-width: 800px) {
-          #presentation .presentation_intro-text .presentation_intro-text_social i {
+          #presentation .presentation_intro-text_social i {
             margin: 0;
             font-size: 3rem; }
-            #presentation .presentation_intro-text .presentation_intro-text_social i:last-of-type {
+            #presentation .presentation_intro-text_social i:last-of-type {
               margin-left: 1rem; } }
         @media screen and (min-width: 1200px) {
-          #presentation .presentation_intro-text .presentation_intro-text_social i {
+          #presentation .presentation_intro-text_social i {
             font-size: 3rem; } }
-    #presentation .presentation_intro-text .presentation_intro-text_greetings h1 {
+    #presentation .presentation_intro-text_greetings h1 {
       margin-top: 3vh;
-      margin-bottom: 5vh; }
+      margin-bottom: 5vh;
+      font-size: 2rem;
+      font-weight: 100; }
+      #presentation .presentation_intro-text_greetings h1 span {
+        font-weight: 600; }
+      #presentation .presentation_intro-text_greetings h1 span.typed-text {
+        font-weight: 100; }
       @media screen and (max-width: 375px) {
-        #presentation .presentation_intro-text .presentation_intro-text_greetings h1 {
+        #presentation .presentation_intro-text_greetings h1 {
           font-size: 45px;
           margin-top: 1vh;
           margin-bottom: 1vh; } }
-    #presentation .presentation_intro-text .presentation_intro-text_greetings p {
-      margin-top: 5vh;
-      margin-bottom: 2vh; }
-      @media screen and (max-width: 375px) {
-        #presentation .presentation_intro-text .presentation_intro-text_greetings p {
-          margin-top: 0vh; } }
-    #presentation .presentation_intro-text .presentation_intro-text_greetings button p {
-      margin: 0; }
-  #presentation h1 {
-    font-size: 2rem;
-    font-weight: 100; }
-    @media screen and (max-width: 800px) {
-      #presentation h1 {
-        font-size: 3rem; } }
-    @media screen and (min-width: 1200px) {
-      #presentation h1 {
-        font-size: 4rem; } }
-    #presentation h1 span {
-      font-weight: 600; }
-    #presentation h1 span.typed-text {
-      font-weight: 100; }
-  #presentation p {
-    color: #999; }
-    @media screen and (max-width: 800px) {
-      #presentation p {
-        font-size: 1.15rem; } }
-    @media screen and (min-width: 1200px) {
-      #presentation p {
-        font-size: 1.3rem; } }
-  #presentation button {
-    cursor: pointer;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    padding: .7rem;
-    border-radius: 15px;
-    background-color: #6E57E0;
-    margin-top: 2rem;
-    transition: all .5s ease; }
-    @media screen and (max-width: 800px) {
-      #presentation button {
-        padding: 1.2rem; } }
-    #presentation button:hover {
-      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
-      padding-left: .8rem;
-      padding-right: .8rem; }
       @media screen and (max-width: 800px) {
-        #presentation button:hover {
-          padding-left: 1.4rem;
-          padding-right: 1.4rem; } }
-    #presentation button p {
-      font-weight: 200;
-      font-size: 18px;
-      position: relative;
-      bottom: 7px;
-      color: white; }
-      #presentation button p i {
-        font-size: 35px;
-        margin-left: 15px;
+        #presentation .presentation_intro-text_greetings h1 {
+          font-size: 3rem; } }
+      @media screen and (min-width: 1200px) {
+        #presentation .presentation_intro-text_greetings h1 {
+          font-size: 4rem; } }
+    #presentation .presentation_intro-text_greetings p {
+      margin-top: 5vh;
+      margin-bottom: 2vh;
+      color: #999; }
+      @media screen and (max-width: 375px) {
+        #presentation .presentation_intro-text_greetings p {
+          margin-top: 0vh; } }
+      @media screen and (max-width: 800px) {
+        #presentation .presentation_intro-text_greetings p {
+          font-size: 1.15rem; } }
+      @media screen and (min-width: 1200px) {
+        #presentation .presentation_intro-text_greetings p {
+          font-size: 1.3rem; } }
+    #presentation .presentation_intro-text_greetings button {
+      cursor: pointer;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      padding: .7rem;
+      border-radius: 15px;
+      background-color: #6E57E0;
+      margin-top: 2rem;
+      transition: all .5s ease; }
+      @media screen and (max-width: 800px) {
+        #presentation .presentation_intro-text_greetings button {
+          padding: 1.2rem; } }
+      #presentation .presentation_intro-text_greetings button:hover {
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
+        padding-left: .8rem;
+        padding-right: .8rem; }
+        @media screen and (max-width: 800px) {
+          #presentation .presentation_intro-text_greetings button:hover {
+            padding-left: 1.4rem;
+            padding-right: 1.4rem; } }
+      #presentation .presentation_intro-text_greetings button p {
+        font-weight: 200;
+        font-size: 18px;
         position: relative;
-        top: 7px; }
+        bottom: 7px;
+        color: white;
+        margin: 0; }
+        #presentation .presentation_intro-text_greetings button p i {
+          font-size: 35px;
+          margin-left: 15px;
+          position: relative;
+          top: 7px; }
 
 .scrolldown_animation {
   width: 100vw;
@@ -580,7 +637,7 @@ input[type="submit"] {
   justify-content: center;
   align-items: center;
   position: relative;
-  right: 30px;
+  right: 20px;
   bottom: .5rem; }
   @media screen and (max-width: 950px) {
     .scrolldown_animation {

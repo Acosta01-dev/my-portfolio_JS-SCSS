@@ -23,18 +23,21 @@ header {
         @include padding-div(20%);
 
     }
+
     /* Media Query for desktop-small to desktop-large screens */
-    @media screen and (min-width: $desktop-small) and (max-width: $desktop-large){
+    @media screen and (min-width: $desktop-small) and (max-width: $desktop-large) {
         @include padding-div(25%);
     }
 
     /* Header Logo Styles */
     .header_logo {
-        a{
+        a {
             color: #0A1029;
             font-size: 2rem;
         }
+
         cursor: pointer;
+
         /* Media Query for mobile-generic screens */
         @media screen and (max-width: $mobile-generic) {
             padding-left: 10px;
@@ -43,16 +46,15 @@ header {
 
         /* Media Query for desktop-large screens */
         @media screen and (min-width: $desktop-large) {
-           img{
-            height: 2rem;
-            margin-top: 5px;
-           }
-    
+            img {
+                height: 2rem;
+                margin-top: 5px;
+            }
+
         }
-     
+
     }
 
-    /* Media Query for mobile-generic screens */
     @media screen and (max-width: $mobile-generic) {
         flex-direction: column;
         justify-content: left;
@@ -60,14 +62,64 @@ header {
         padding: 0px;
     }
 
-    /* Navigation Styles */
+    .language_btn {
+        @media screen and (max-width: $mobile-generic) {
+            display: none;
+        }
+
+        cursor: pointer;
+
+        &-text{
+            i{
+                transition: all .2s;
+            }
+        }
+        &-content {
+            display: flex;
+            flex-direction: column;
+            background-color: $principal-color;
+            overflow: hidden;
+            max-height: 0px;
+            position: absolute;
+            margin-top: 1rem;
+            width: 5rem;
+            border-radius: 5px;
+
+            a {
+                padding: 5px;
+                color: #ffff;
+
+                &:hover {
+                    background-color: #5e47cc;
+                }
+            }
+        }
+    }
+
+    .language_btn_mobile {
+        @media screen and (min-width: $mobile-generic) {
+            display: none;
+        }
+
+        display: flex;
+        position: absolute;
+        top: 11px;
+        right: 4rem;
+
+        .language_btn-content {
+            margin-top: 38px;
+            background-color: $principal-color;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
     nav {
-    
+
 
         ul {
             display: flex;
-            
-            /* Media Query for mobile-generic screens */
+
             @media screen and (max-width: $mobile-generic) {
                 align-items: center;
                 flex-direction: column;
@@ -76,10 +128,12 @@ header {
                 top: 2.9rem;
                 width: 100%;
             }
-                
-            li{
+
+
+
+            li {
                 margin-left: 15px;
-                /* Media Query for mobile-generic screens */
+
                 @media screen and (max-width: $mobile-generic) {
                     padding: 1.1rem;
                     margin-left: 0px;
@@ -87,18 +141,37 @@ header {
                     text-align: center;
                     border-bottom: .5px solid gray;
                 }
-                a{
+
+                @media screen and (min-width: $mobile-generic) {
+                    &:hover {
+                        background-color: $principal-color;
+                        border-radius: 5px;
+
+                        a {
+                            color: #ffff;
+                        }
+                    }
+                }
+
+                a {
                     font-weight: 400;
                     color: #0A1029;
                     text-decoration: none;
                 }
+
+                height: 100%;
+                padding: .5rem;
+
             }
         }
     }
+
 }
 
+
+
 /* Mobile Nav Styles */
-#mobile-nav{
+#mobile-nav {
     max-height: 0;
     transition: all .5s;
     background-color: rgb(245, 242, 242);
@@ -107,10 +180,10 @@ header {
 }
 
 /* Burger Menu Styles */
-.burguer_menu{
+.burguer_menu {
     position: fixed;
     right: 1rem;
-    top:0;
+    top: 0;
     transition: all .5s;
     display: none;
 

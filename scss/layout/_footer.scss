@@ -1,30 +1,49 @@
 footer {
-
     margin-top: 5rem;
     padding-top: 3rem;
-    padding-bottom: 6rem;
-
+    padding-bottom: 3rem;
     background-color: $principal-color;
 
+    @media screen and (max-width: $mobile-generic) {
+        padding-bottom: 2rem;
+    }
     p.subtitle {
         color: #ffff;
+    }
+    .footer-links{
+        display: flex;
+        width: 20%;
+        margin: 0 auto;
+        margin-top: 3%;
+        justify-content: space-evenly;
+      
+       
+        a{
+            background-color: $secondary-color;
+            border-radius: 50px;
+            padding: 5px 15px;
+            font-size: 2rem;
+            margin: 5px 10px;
+            color: $principal-color;
+            text-decoration: none;
+            i{
+                position: relative;
+                top: 1px;
+            }
+        }
     }
 }
 
 #form {
-    
     @media screen and (max-width: $mobile-generic) {
-
       padding: 5%;
       padding-bottom: 0px;
     }
-
     @media screen and (min-width: $desktop-small) {
         @include padding-div(25%);
         margin-top: 3rem;
     }
 }
-
 
 .field label {
     display: block;
@@ -41,7 +60,6 @@ footer {
         min-width: 250px;
         line-height: 1.5;
         font-size: 14px;
-
         margin-bottom: 2rem;
         width: 100%;
         /* Full width */
@@ -53,15 +71,11 @@ footer {
         /* Rounded borders */
         box-sizing: border-box;
         /* Make sure that padding and width stays in place */
-
         resize: vertical;
-            /* Allow the user to vertically resize the textarea (not horizontally) */
-
+        /* Allow the user to vertically resize the textarea (not horizontally) */
         background-color: #F6F9FF;
-
     }
 }
-
 
 input[type="submit"] {
     background-color: $secondary-color;
@@ -83,5 +97,5 @@ input[type="submit"] {
 }
 
 #message{
-    height: 5rem;
+    padding: 5px 5px 5rem 5px;
 }
