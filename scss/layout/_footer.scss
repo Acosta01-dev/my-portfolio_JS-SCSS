@@ -14,9 +14,12 @@ footer {
         display: flex;
         width: 20%;
         margin: 0 auto;
-        margin-top: 3%;
+        margin-top: 0%;
         justify-content: space-evenly;
       
+        @media screen and (max-width: $mobile-generic) {
+            margin-top: 15%;
+        }
        
         a{
             background-color: $secondary-color;
@@ -35,8 +38,9 @@ footer {
 }
 
 #form {
+    padding-top: 0;
+    padding: 5%;
     @media screen and (max-width: $mobile-generic) {
-      padding: 5%;
       padding-bottom: 0px;
     }
     @media screen and (min-width: $desktop-small) {

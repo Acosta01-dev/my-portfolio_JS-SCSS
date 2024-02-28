@@ -231,8 +231,11 @@ footer {
     display: flex;
     width: 20%;
     margin: 0 auto;
-    margin-top: 3%;
+    margin-top: 0%;
     justify-content: space-evenly; }
+    @media screen and (max-width: 800px) {
+      footer .footer-links {
+        margin-top: 15%; } }
     footer .footer-links a {
       background-color: white;
       border-radius: 50px;
@@ -245,16 +248,17 @@ footer {
         position: relative;
         top: 1px; }
 
-@media screen and (max-width: 800px) {
-  #form {
-    padding: 5%;
-    padding-bottom: 0px; } }
-
-@media screen and (min-width: 1200px) {
-  #form {
-    padding-left: 25%;
-    padding-right: 25%;
-    margin-top: 3rem; } }
+#form {
+  padding-top: 0;
+  padding: 5%; }
+  @media screen and (max-width: 800px) {
+    #form {
+      padding-bottom: 0px; } }
+  @media screen and (min-width: 1200px) {
+    #form {
+      padding-left: 25%;
+      padding-right: 25%;
+      margin-top: 3rem; } }
 
 .field label {
   display: block;
